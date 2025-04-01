@@ -81,13 +81,13 @@ const Sidebar = () => {
           isSidebarCollapsed ? "px-5" : "px-8"
         }`}
       >
-        {/*<Image*/}
-        {/*  src="https://s3-inventorymanagement.s3.us-east-2.amazonaws.com/logo.png"*/}
-        {/*  alt="edstock-logo"*/}
-        {/*  width={27}*/}
-        {/*  height={27}*/}
-        {/*  className="rounded w-8"*/}
-        {/*/>*/}
+        <Image
+          src="https://images2.thanhnien.vn/528068263637045248/2023/4/23/edit-truc-anh-16822518118551137084698.png"
+          alt="edstock-logo"
+          width={27}
+          height={27}
+          className="rounded w-8"
+        />
         <h1
           className={`${
             isSidebarCollapsed ? "hidden" : "block"
