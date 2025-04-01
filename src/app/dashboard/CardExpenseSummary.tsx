@@ -11,13 +11,44 @@ type ExpenseSums = {
 
 const colors = ["#00C49F", "#0088FE", "#FFBB28"];
 
+const fakeExpenseSummary = [
+  {
+    totalExpenses: 1200.5,
+  },
+];
+
+const fakeExpenseByCategorySummary: ExpenseByCategorySummary[] = [
+  {
+    expenseByCategorySummaryId: "1",
+    category: "Marketing",
+    amount: "450",
+    date: "2025-03-01",
+  },
+  {
+    expenseByCategorySummaryId: "2",
+    category: "Operations",
+    amount: "300",
+    date: "2025-03-02",
+  },
+  {
+    expenseByCategorySummaryId: "3",
+    category: "Logistics",
+    amount: "450",
+    date: "2025-03-03",
+  },
+];
+
+
 const CardExpenseSummary = () => {
   const { data: dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
 
-  const expenseSummary = dashboardMetrics?.expenseSummary[0];
+  const expenseSummary =
+    dashboardMetrics?.expenseSummary?.[0] ?? fakeExpenseSummary[0];
 
   const expenseByCategorySummary =
-    dashboardMetrics?.expenseByCategorySummary || [];
+    dashboardMetrics?.expenseByCategorySummary?.length
+      ? dashboardMetrics.expenseByCategorySummary
+      : fakeExpenseByCategorySummary;
 
   const expenseSums = expenseByCategorySummary.reduce(
     (acc: ExpenseSums, item: ExpenseByCategorySummary) => {
@@ -106,22 +137,20 @@ const CardExpenseSummary = () => {
           {/* FOOTER */}
           <div>
             <hr />
-            {expenseSummary && (
-              <div className="mt-3 flex justify-between items-center px-7 mb-4">
-                <div className="pt-2">
-                  <p className="text-sm">
-                    Average:{" "}
-                    <span className="font-semibold">
-                      ${expenseSummary.totalExpenses.toFixed(2)}
-                    </span>
-                  </p>
-                </div>
-                <span className="flex items-center mt-2">
-                  <TrendingUp className="mr-2 text-green-500" />
-                  30%
-                </span>
+            <div className="mt-3 flex justify-between items-center px-7 mb-4">
+              <div className="pt-2">
+                <p className="text-sm">
+                  Average:{" "}
+                  <span className="font-semibold">
+                    ${expenseSummary.totalExpenses.toFixed(2)}
+                  </span>
+                </p>
               </div>
-            )}
+              <span className="flex items-center mt-2">
+                <TrendingUp className="mr-2 text-green-500" />
+                30%
+              </span>
+            </div>
           </div>
         </>
       )}

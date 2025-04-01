@@ -15,7 +15,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
+import React, { useEffect } from "react";
 
 interface SidebarLinkProps {
   href: string;
@@ -68,6 +68,15 @@ const Sidebar = () => {
   const toggleSidebar = () => {
     dispatch(setIsSidebarCollapsed(!isSidebarCollapsed));
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      dispatch(setIsSidebarCollapsed(window.innerWidth < 768));
+    };
+    handleResize(); // Gọi khi mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const sidebarClassNames = `fixed flex flex-col ${
     isSidebarCollapsed ? "w-0 md:w-16" : "w-72 md:w-64"

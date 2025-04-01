@@ -10,10 +10,40 @@ import {
   XAxis,
   YAxis,
 } from "recharts";
+const fakePurchaseData = [
+  {
+    date: "2025-03-01",
+    totalPurchased: 120000,
+    changePercentage: 2.5,
+  },
+  {
+    date: "2025-03-02",
+    totalPurchased: 135000,
+    changePercentage: 3.8,
+  },
+  {
+    date: "2025-03-03",
+    totalPurchased: 128000,
+    changePercentage: -1.5,
+  },
+  {
+    date: "2025-03-04",
+    totalPurchased: 150000,
+    changePercentage: 5.1,
+  },
+  {
+    date: "2025-03-05",
+    totalPurchased: 142000,
+    changePercentage: -2.0,
+  },
+];
 
 const CardPurchaseSummary = () => {
   const { data, isLoading } = useGetDashboardMetricsQuery();
-  const purchaseData = data?.purchaseSummary || [];
+  const purchaseData = data?.purchaseSummary?.length
+    ? data.purchaseSummary
+    : fakePurchaseData;
+
 
   const lastDataPoint = purchaseData[purchaseData.length - 1] || null;
 
@@ -44,11 +74,10 @@ const CardPurchaseSummary = () => {
                 </p>
                 {lastDataPoint && (
                   <p
-                    className={`text-sm ${
-                      lastDataPoint.changePercentage! >= 0
+                    className={`text-sm ${lastDataPoint.changePercentage! >= 0
                         ? "text-green-500"
                         : "text-red-500"
-                    } flex ml-3`}
+                      } flex ml-3`}
                   >
                     {lastDataPoint.changePercentage! >= 0 ? (
                       <TrendingUp className="w-5 h-5 mr-1" />

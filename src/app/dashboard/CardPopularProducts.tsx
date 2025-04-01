@@ -7,6 +7,33 @@ import Image from "next/image";
 const CardPopularProducts = () => {
   const { data: dashboardMetrics, isLoading } = useGetDashboardMetricsQuery();
 
+  const fakeProducts = [
+    {
+      productId: "fake1",
+      name: "Sample Product 1",
+      price: 49.99,
+      rating: 4.5,
+      stockQuantity: 3200,
+    },
+    {
+      productId: "fake2",
+      name: "Sample Product 2",
+      price: 29.99,
+      rating: 4.2,
+      stockQuantity: 2800,
+    },
+    {
+      productId: "fake3",
+      name: "Sample Product 3",
+      price: 19.99,
+      rating: 3.8,
+      stockQuantity: 1500,
+    },
+  ];
+
+  const products = dashboardMetrics?.popularProducts ?? [];
+  const productsToShow = products.length > 0 ? products : fakeProducts;
+  
   return (
     <div className="row-span-3 xl:row-span-6 bg-white shadow-md rounded-2xl pb-16">
       {isLoading ? (
@@ -18,7 +45,7 @@ const CardPopularProducts = () => {
           </h3>
           <hr />
           <div className="overflow-auto h-full">
-            {dashboardMetrics?.popularProducts.map((product) => (
+            {productsToShow.map((product) => (
               <div
                 key={product.productId}
                 className="flex items-center justify-between gap-3 px-5 py-7 border-b"
