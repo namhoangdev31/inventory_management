@@ -95,62 +95,62 @@ const CardPurchaseSummary = () => {
 
             {/* CHART */}
             <div className="w-full aspect-[3/1] md:aspect-[2/1] px-2">
-            <ResponsiveContainer width="100%" height="100%">
-              <AreaChart
-                data={purchaseData}
-                margin={{ top: 0, right: 0, left: -50, bottom: 70 }}
-              >
-                {/* Gradient Fill */}
-                <defs>
-                  <linearGradient id="colorPurchased" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="5%" stopColor="#8884d8" stopOpacity={0.4} />
-                    <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
-                  </linearGradient>
-                </defs>
+              <ResponsiveContainer width="100%" height="100%">
+                <AreaChart
+                  data={purchaseData}
+                  margin={{ top: 0, right: 0, left: -50, bottom: 70 }}
+                >
+                  {/* Gradient Fill */}
+                  <defs>
+                    <linearGradient id="colorPurchased" x1="0" y1="0" x2="0" y2="1">
+                      <stop offset="5%" stopColor="#8884d8" stopOpacity={0.4} />
+                      <stop offset="95%" stopColor="#8884d8" stopOpacity={0} />
+                    </linearGradient>
+                  </defs>
 
-                {/* Axis */}
-                <XAxis
-                  dataKey="date"
-                  tickFormatter={(date) => {
-                    const d = new Date(date);
-                    return `${d.getMonth() + 1}/${d.getDate()}`;
-                  }}
-                  tick={{ fontSize: 10, fill: "#aaa" }}
-                  axisLine={false}
-                  tickLine={false}
-                />
-                <YAxis
-                  tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
-                  tick={{ fontSize: 10, fill: "#aaa" }}
-                  axisLine={false}
-                  tickLine={false}
-                />
+                  {/* Axis */}
+                  <XAxis
+                    dataKey="date"
+                    tickFormatter={(date) => {
+                      const d = new Date(date);
+                      return `${d.getMonth() + 1}/${d.getDate()}`;
+                    }}
+                    tick={{ fontSize: 10, fill: "#aaa" }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
+                  <YAxis
+                    tickFormatter={(value) => `$${(value / 1000).toFixed(0)}k`}
+                    tick={{ fontSize: 10, fill: "#aaa" }}
+                    axisLine={false}
+                    tickLine={false}
+                  />
 
-                {/* Tooltip */}
-                <Tooltip
-                  contentStyle={{ borderRadius: 10, borderColor: "#ccc" }}
-                  formatter={(value: number) => [`$${numeral(value).format("0,0")}`]}
-                  labelFormatter={(label) => {
-                    const date = new Date(label);
-                    return date.toLocaleDateString("en-US", {
-                      weekday: "short",
-                      month: "short",
-                      day: "numeric",
-                    });
-                  }}
-                />
+                  {/* Tooltip */}
+                  <Tooltip
+                    contentStyle={{ borderRadius: 10, borderColor: "#ccc" }}
+                    formatter={(value: number) => [`$${numeral(value).format("0,0")}`]}
+                    labelFormatter={(label) => {
+                      const date = new Date(label);
+                      return date.toLocaleDateString("en-US", {
+                        weekday: "short",
+                        month: "short",
+                        day: "numeric",
+                      });
+                    }}
+                  />
 
-                {/* Area Line */}
-                <Area
-                  type="monotone"
-                  dataKey="totalPurchased"
-                  stroke="#8884d8"
-                  strokeWidth={2}
-                  fill="url(#colorPurchased)"
-                  dot={false}
-                />
-              </AreaChart>
-            </ResponsiveContainer>
+                  {/* Area Line */}
+                  <Area
+                    type="monotone"
+                    dataKey="totalPurchased"
+                    stroke="#8884d8"
+                    strokeWidth={2}
+                    fill="url(#colorPurchased)"
+                    dot={false}
+                  />
+                </AreaChart>
+              </ResponsiveContainer>
             </div>
           </div>
         </>
