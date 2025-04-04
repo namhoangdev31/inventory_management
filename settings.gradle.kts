@@ -1,4 +1,4 @@
-rootProject.name = "fullstack_management"
+rootProject.name = "inventory_management"
 enableFeaturePreview("TYPESAFE_PROJECT_ACCESSORS")
 
 pluginManagement {

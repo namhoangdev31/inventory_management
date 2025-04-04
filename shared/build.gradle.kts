@@ -47,7 +47,7 @@ kotlin {
 }
 
 android {
-    namespace = "org.example.fullstack_management.shared"
+    namespace = "org.example.inventory_management.shared"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11

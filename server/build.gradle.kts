@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.kotlinJvm)
     alias(libs.plugins.ktor)
+    kotlin("plugin.serialization") version "2.1.10"
     application
 }
 
-group = "org.example.fullstack_management"
+group = "org.example.inventory_management"
 version = "1.0.0"
 
 application {
-    mainClass.set("org.example.fullstack_management.ApplicationKt")
+    mainClass.set("io.ktor.server.netty.EngineMain")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=${extra["io.ktor.development"] ?: "false"}")
 }
 
@@ -20,6 +21,8 @@ repositories {
 dependencies {
     implementation(projects.shared)
     implementation(libs.logback)
+    implementation(libs.exposed.core)
+    implementation(libs.exposed.jdbc)
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.netty)
     testImplementation(libs.ktor.server.tests)
@@ -71,4 +74,6 @@ dependencies {
     testImplementation(libs.jetbrains.kotlin.test.junit)
     implementation(libs.jbcrypt)
     implementation(libs.ktor.server.compression)
+    implementation(libs.exposed.dao)
+    implementation(libs.kotlinx.serialization.json)
 }

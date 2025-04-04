@@ -78,11 +78,11 @@ kotlin {
 }
 
 android {
-    namespace = "org.example.fullstack_management"
+    namespace = "org.example.inventory_management"
     compileSdk = libs.versions.android.compileSdk.get().toInt()
 
     defaultConfig {
-        applicationId = "org.example.fullstack_management"
+        applicationId = "org.example.inventory_management"
         minSdk = libs.versions.android.minSdk.get().toInt()
         targetSdk = libs.versions.android.targetSdk.get().toInt()
         versionCode = 1
@@ -110,11 +110,11 @@ dependencies {
 
 compose.desktop {
     application {
-        mainClass = "org.example.fullstack_management.MainKt"
+        mainClass = "org.example.inventory_management.MainKt"
 
         nativeDistributions {
             targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
-            packageName = "org.example.fullstack_management"
+            packageName = "org.example.inventory_management"
             packageVersion = "1.0.0"
         }
     }

@@ -16,3 +16,14 @@ captures
 !*.xcodeproj/project.xcworkspace/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+node_modules
+/gradle.properties
+node_modules/
+/docs/.swagger-codegen-ignore
+/docs/index.html
+/docs/.swagger-codegen/VERSION
+.next
+build
+.vscode
+next-env.d.ts
+docs
