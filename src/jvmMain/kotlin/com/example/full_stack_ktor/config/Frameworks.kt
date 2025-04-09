@@ -1,8 +1,6 @@
 package com.example.full_stack_ktor.config
 
 
-import com.example.full_stack_ktor.IArticleService
-import com.example.full_stack_ktor.IAuthService
 import com.example.full_stack_ktor.controllers.AuthController
 import com.example.full_stack_ktor.controllers.UserController
 import com.example.full_stack_ktor.dao.*
@@ -10,16 +8,10 @@ import com.example.full_stack_ktor.repositories.AuthRepository
 import com.example.full_stack_ktor.repositories.AuthRepositoryImpl
 import com.example.full_stack_ktor.repositories.UserRepository
 import com.example.full_stack_ktor.repositories.UserRepositoryImpl
-import com.example.full_stack_ktor.services.ArticleService
-import com.example.full_stack_ktor.services.AuthService
-import com.example.full_stack_ktor.services.UserService
+import com.example.full_stack_ktor.services.*
 import io.ktor.server.application.*
 import io.kvision.remote.kvisionInit
 import org.koin.dsl.module
-import org.koin.ktor.plugin.Koin
-import org.koin.logger.SLF4JLogger
-import org.koin.logger.slf4jLogger
-import org.slf4j.event.Level
 
 fun Application.configureFrameworks() {
 //    install(Koin) {
@@ -54,7 +46,7 @@ fun articleModule() = module {
 }
 
 fun userModule() = module {
-    single<UserService> { UserService() }
+    single<IUserService> { UserService() }
     single<UserController> { UserController() }
     single<UserRepository> { UserRepositoryImpl(get(), get()) }
 }

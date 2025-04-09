@@ -2,12 +2,11 @@ package com.example.full_stack_ktor.services
 
 import com.auth0.jwt.JWT
 import com.auth0.jwt.algorithms.Algorithm
-import com.example.full_stack_ktor.IAuthService
 import com.example.full_stack_ktor.entity.UserEntity
 import io.ktor.server.application.*
 import org.koin.java.KoinJavaComponent.inject
 import java.util.*
-
+@Suppress("ACTUAL_WITHOUT_EXPECT")
 actual class AuthService: IAuthService {
     private val environment: ApplicationEnvironment by inject(ApplicationEnvironment::class.java)
     private val jwtSecret: String = environment.config.property("jwt.secret").getString()

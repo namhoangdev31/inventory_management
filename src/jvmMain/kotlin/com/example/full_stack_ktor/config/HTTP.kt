@@ -41,9 +41,9 @@ fun Application.configureHTTP() {
             permanentRedirect = true
         }
     }
-    routing {
-        openAPI(path = "openapi")
-    }
+//    routing {
+//        openAPI(path = "openapi")
+//    }
     install(SimpleCache) {
         memoryCache {
             invalidateAt = 10.seconds
@@ -60,9 +60,9 @@ fun Application.configureHTTP() {
         }
     }
 
-    routing {
-        swaggerUI(path = "openapi")
-    }
+//    routing {
+//        swaggerUI(path = "openapi")
+//    }
 //    install(SimpleCache) {
 //        redisCache {
 //            invalidateAt = 10.seconds

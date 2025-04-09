@@ -1,4 +1,4 @@
-package com.example.full_stack_ktor
+package com.example.full_stack_ktor.services
 
 import com.example.full_stack_ktor.model.User
 import io.kvision.annotations.KVService

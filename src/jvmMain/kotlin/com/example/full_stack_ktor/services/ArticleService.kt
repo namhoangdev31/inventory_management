@@ -1,10 +1,9 @@
 package com.example.full_stack_ktor.services
 
-import com.example.full_stack_ktor.IArticleService
 import com.example.full_stack_ktor.model.Article
 import com.example.full_stack_ktor.model.ArticlesDto
 import com.example.full_stack_ktor.model.Comment
-
+@Suppress("ACTUAL_WITHOUT_EXPECT")
 actual class ArticleService: IArticleService {
     override suspend fun articles(
         tag: String?,
