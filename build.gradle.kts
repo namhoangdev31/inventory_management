@@ -35,6 +35,7 @@ val jdbcNamedParametersVersion: String by project
 val koinVersion: String by project
 val bcryptVersion: String by project
 val coroutinesVersion: String by project
+val flaxoosVersion: String by project
 
 val mainClassName = "io.ktor.server.netty.EngineMain"
 
@@ -93,6 +94,7 @@ kotlin {
                 implementation("io.ktor:ktor-server-double-receive:$ktorVersion")
                 implementation("io.github.cotrin8672:ktor-line-webhook-plugin:1.5.0")
                 implementation("io.ktor:ktor-server-request-validation:$ktorVersion")
+                implementation("io.ktor:ktor-server-html-builder:$ktorVersion")
                 implementation("io.ktor:ktor-server-resources:$ktorVersion")
                 implementation("io.ktor:ktor-server-sse:$ktorVersion")
                 implementation("io.ktor:ktor-server-host-common:$ktorVersion")
@@ -112,11 +114,11 @@ kotlin {
                 implementation("io.ktor:ktor-server-websockets:$ktorVersion")
                 implementation("io.insert-koin:koin-ktor:$koinVersion")
                 implementation("io.insert-koin:koin-logger-slf4j:$koinVersion")
-                implementation("io.github.flaxoos:ktor-server-rate-limiting:2.1.2")
-                implementation("io.github.flaxoos:ktor-server-task-scheduling-core:2.1.2")
-                implementation("io.github.flaxoos:ktor-server-task-scheduling-redis:2.1.2")
-                implementation("io.github.flaxoos:ktor-server-task-scheduling-mongodb:2.1.2")
-                implementation("io.github.flaxoos:ktor-server-task-scheduling-jdbc:2.1.2")
+                implementation("io.github.flaxoos:ktor-server-rate-limiting:$flaxoosVersion")
+                implementation("io.github.flaxoos:ktor-server-task-scheduling-core:$flaxoosVersion")
+                implementation("io.github.flaxoos:ktor-server-task-scheduling-redis:$flaxoosVersion")
+                implementation("io.github.flaxoos:ktor-server-task-scheduling-mongodb:$flaxoosVersion")
+                implementation("io.github.flaxoos:ktor-server-task-scheduling-jdbc:$flaxoosVersion")
                 implementation("io.ktor:ktor-server-freemarker:$ktorVersion")
                 implementation("io.ktor:ktor-server-call-id:$ktorVersion")
                 implementation("io.ktor:ktor-server-netty:$ktorVersion")

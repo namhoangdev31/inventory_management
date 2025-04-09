@@ -6,8 +6,8 @@
 * compileKotlinJs - Compiles frontend sources.
 * compileKotlinJvm - Compiles backend sources.
 ### Running
-* jsRun - Starts a webpack dev server on port 3000
-* jvmRun - Starts a dev server on port 8080
+* jsRun - Starts a webpack dev server on port 3000 `./gradlew jsRun -t`
+* jvmRun - Starts a dev server on port 8080 `./gradlew jvmRun -t`
 
 Note: For auto reload with Ktor JVM backend you need to run  `gradlew -t compileKotlinJvm` in a separate Gradle process.
 

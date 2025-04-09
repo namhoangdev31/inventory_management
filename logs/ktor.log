@@ -1,0 +1,391 @@
+[2025-04-09 16:54:23,639]-[main] INFO  Application - Autoreload is disabled because the development mode is off.
+[2025-04-09 16:54:26,232]-[main] INFO  Exposed - Preparing create tables statements took 329ms
+[2025-04-09 16:54:26,289]-[main] INFO  Exposed - Executing create tables statements took 57ms
+[2025-04-09 16:54:26,366]-[main] INFO  Exposed - Extracting table columns took 76ms
+[2025-04-09 16:54:26,428]-[main] INFO  Exposed - Extracting primary keys took 62ms
+[2025-04-09 16:54:26,620]-[main] INFO  Exposed - Extracting column constraints took 190ms
+[2025-04-09 16:54:26,620]-[main] INFO  Exposed - Preparing alter table statements took 331ms
+[2025-04-09 16:54:26,672]-[main] INFO  Exposed - Executing alter table statements took 52ms
+[2025-04-09 16:54:26,852]-[main] INFO  Exposed - Checking mapping consistence took 179ms
+[2025-04-09 16:54:26,910]-[main] INFO  Exposed - Preparing create tables statements took 57ms
+[2025-04-09 16:54:26,973]-[main] INFO  Exposed - Executing create tables statements took 62ms
+[2025-04-09 16:54:27,038]-[main] INFO  Exposed - Extracting table columns took 65ms
+[2025-04-09 16:54:27,107]-[main] INFO  Exposed - Extracting primary keys took 69ms
+[2025-04-09 16:54:27,245]-[main] INFO  Exposed - Extracting column constraints took 137ms
+[2025-04-09 16:54:27,246]-[main] INFO  Exposed - Preparing alter table statements took 273ms
+[2025-04-09 16:54:27,323]-[main] INFO  Exposed - Executing alter table statements took 77ms
+[2025-04-09 16:54:27,546]-[main] INFO  Exposed - Checking mapping consistence took 223ms
+[2025-04-09 16:54:27,624]-[main] INFO  Exposed - Preparing create tables statements took 69ms
+[2025-04-09 16:54:27,691]-[main] INFO  Exposed - Executing create tables statements took 67ms
+[2025-04-09 16:54:27,775]-[main] INFO  Exposed - Extracting table columns took 84ms
+[2025-04-09 16:54:27,854]-[main] INFO  Exposed - Extracting primary keys took 79ms
+[2025-04-09 16:54:29,131]-[main] INFO  Exposed - Extracting column constraints took 1276ms
+[2025-04-09 16:54:29,131]-[main] INFO  Exposed - Preparing alter table statements took 1440ms
+[2025-04-09 16:54:29,234]-[main] INFO  Exposed - Executing alter table statements took 103ms
+[2025-04-09 16:54:29,514]-[main] INFO  Exposed - Checking mapping consistence took 280ms
+[2025-04-09 16:54:29,594]-[main] INFO  Exposed - Preparing create tables statements took 80ms
+[2025-04-09 16:54:29,670]-[main] INFO  Exposed - Executing create tables statements took 76ms
+[2025-04-09 16:54:29,755]-[main] INFO  Exposed - Extracting table columns took 85ms
+[2025-04-09 16:54:29,850]-[main] INFO  Exposed - Extracting primary keys took 94ms
+[2025-04-09 16:54:30,392]-[main] INFO  Exposed - Extracting column constraints took 541ms
+[2025-04-09 16:54:30,392]-[main] INFO  Exposed - Preparing alter table statements took 722ms
+[2025-04-09 16:54:30,507]-[main] INFO  Exposed - Executing alter table statements took 115ms
+[2025-04-09 16:54:30,859]-[main] INFO  Exposed - Checking mapping consistence took 352ms
+[2025-04-09 16:54:30,971]-[main] INFO  Exposed - Preparing create tables statements took 108ms
+[2025-04-09 16:54:31,058]-[main] INFO  Exposed - Executing create tables statements took 86ms
+[2025-04-09 16:54:31,138]-[main] INFO  Exposed - Extracting table columns took 79ms
+[2025-04-09 16:54:31,211]-[main] INFO  Exposed - Extracting primary keys took 72ms
+[2025-04-09 16:54:32,063]-[main] INFO  Exposed - Extracting column constraints took 850ms
+[2025-04-09 16:54:32,063]-[main] INFO  Exposed - Preparing alter table statements took 1004ms
+[2025-04-09 16:54:32,150]-[main] INFO  Exposed - Executing alter table statements took 87ms
+[2025-04-09 16:54:32,396]-[main] INFO  Exposed - Checking mapping consistence took 245ms
+[2025-04-09 16:54:32,476]-[main] INFO  Exposed - Preparing create tables statements took 77ms
+[2025-04-09 16:54:32,539]-[main] INFO  Exposed - Executing create tables statements took 63ms
+[2025-04-09 16:54:32,614]-[main] INFO  Exposed - Extracting table columns took 75ms
+[2025-04-09 16:54:32,683]-[main] INFO  Exposed - Extracting primary keys took 69ms
+[2025-04-09 16:54:33,834]-[main] INFO  Exposed - Extracting column constraints took 1150ms
+[2025-04-09 16:54:33,834]-[main] INFO  Exposed - Preparing alter table statements took 1295ms
+[2025-04-09 16:54:33,918]-[main] INFO  Exposed - Executing alter table statements took 84ms
+[2025-04-09 16:54:34,142]-[main] INFO  Exposed - Checking mapping consistence took 223ms
+[2025-04-09 16:54:34,220]-[main] INFO  Exposed - Preparing create tables statements took 77ms
+[2025-04-09 16:54:34,290]-[main] INFO  Exposed - Executing create tables statements took 70ms
+[2025-04-09 16:54:34,356]-[main] INFO  Exposed - Extracting table columns took 66ms
+[2025-04-09 16:54:34,418]-[main] INFO  Exposed - Extracting primary keys took 62ms
+[2025-04-09 16:54:34,996]-[main] INFO  Exposed - Extracting column constraints took 578ms
+[2025-04-09 16:54:34,996]-[main] INFO  Exposed - Preparing alter table statements took 706ms
+[2025-04-09 16:54:35,110]-[main] INFO  Exposed - Executing alter table statements took 113ms
+[2025-04-09 16:54:35,434]-[main] INFO  Exposed - Checking mapping consistence took 324ms
+[2025-04-09 16:54:35,508]-[main] INFO  Exposed - Preparing create tables statements took 74ms
+[2025-04-09 16:54:35,559]-[main] INFO  Exposed - Executing create tables statements took 50ms
+[2025-04-09 16:54:35,614]-[main] INFO  Exposed - Extracting table columns took 55ms
+[2025-04-09 16:54:35,665]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:35,991]-[main] INFO  Exposed - Extracting column constraints took 326ms
+[2025-04-09 16:54:35,991]-[main] INFO  Exposed - Preparing alter table statements took 432ms
+[2025-04-09 16:54:36,069]-[main] INFO  Exposed - Executing alter table statements took 78ms
+[2025-04-09 16:54:36,316]-[main] INFO  Exposed - Checking mapping consistence took 247ms
+[2025-04-09 16:54:36,412]-[main] INFO  Exposed - Preparing create tables statements took 95ms
+[2025-04-09 16:54:36,511]-[main] INFO  Exposed - Executing create tables statements took 99ms
+[2025-04-09 16:54:36,585]-[main] INFO  Exposed - Extracting table columns took 74ms
+[2025-04-09 16:54:36,639]-[main] INFO  Exposed - Extracting primary keys took 53ms
+[2025-04-09 16:54:37,048]-[main] INFO  Exposed - Extracting column constraints took 408ms
+[2025-04-09 16:54:37,048]-[main] INFO  Exposed - Preparing alter table statements took 537ms
+[2025-04-09 16:54:37,105]-[main] INFO  Exposed - Executing alter table statements took 57ms
+[2025-04-09 16:54:37,537]-[main] INFO  Exposed - Checking mapping consistence took 432ms
+[2025-04-09 16:54:37,636]-[main] INFO  Exposed - Preparing create tables statements took 98ms
+[2025-04-09 16:54:37,685]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:37,739]-[main] INFO  Exposed - Extracting table columns took 53ms
+[2025-04-09 16:54:37,790]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:38,024]-[main] INFO  Exposed - Extracting column constraints took 234ms
+[2025-04-09 16:54:38,024]-[main] INFO  Exposed - Preparing alter table statements took 338ms
+[2025-04-09 16:54:38,074]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:38,227]-[main] INFO  Exposed - Checking mapping consistence took 153ms
+[2025-04-09 16:54:38,280]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:38,330]-[main] INFO  Exposed - Executing create tables statements took 50ms
+[2025-04-09 16:54:38,385]-[main] INFO  Exposed - Extracting table columns took 55ms
+[2025-04-09 16:54:38,437]-[main] INFO  Exposed - Extracting primary keys took 52ms
+[2025-04-09 16:54:38,673]-[main] INFO  Exposed - Extracting column constraints took 236ms
+[2025-04-09 16:54:38,673]-[main] INFO  Exposed - Preparing alter table statements took 343ms
+[2025-04-09 16:54:38,724]-[main] INFO  Exposed - Executing alter table statements took 51ms
+[2025-04-09 16:54:38,894]-[main] INFO  Exposed - Checking mapping consistence took 170ms
+[2025-04-09 16:54:38,966]-[main] INFO  Exposed - Preparing create tables statements took 71ms
+[2025-04-09 16:54:39,045]-[main] INFO  Exposed - Executing create tables statements took 79ms
+[2025-04-09 16:54:39,160]-[main] INFO  Exposed - Extracting table columns took 115ms
+[2025-04-09 16:54:39,263]-[main] INFO  Exposed - Extracting primary keys took 103ms
+[2025-04-09 16:54:39,844]-[main] INFO  Exposed - Extracting column constraints took 580ms
+[2025-04-09 16:54:39,844]-[main] INFO  Exposed - Preparing alter table statements took 799ms
+[2025-04-09 16:54:39,897]-[main] INFO  Exposed - Executing alter table statements took 53ms
+[2025-04-09 16:54:40,050]-[main] INFO  Exposed - Checking mapping consistence took 153ms
+[2025-04-09 16:54:40,104]-[main] INFO  Exposed - Preparing create tables statements took 53ms
+[2025-04-09 16:54:40,154]-[main] INFO  Exposed - Executing create tables statements took 50ms
+[2025-04-09 16:54:40,206]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:40,257]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:40,615]-[main] INFO  Exposed - Extracting column constraints took 358ms
+[2025-04-09 16:54:40,615]-[main] INFO  Exposed - Preparing alter table statements took 461ms
+[2025-04-09 16:54:40,665]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:40,820]-[main] INFO  Exposed - Checking mapping consistence took 155ms
+[2025-04-09 16:54:40,872]-[main] INFO  Exposed - Preparing create tables statements took 52ms
+[2025-04-09 16:54:40,921]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:40,975]-[main] INFO  Exposed - Extracting table columns took 54ms
+[2025-04-09 16:54:41,026]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:41,142]-[main] INFO  Exposed - Extracting column constraints took 116ms
+[2025-04-09 16:54:41,142]-[main] INFO  Exposed - Preparing alter table statements took 221ms
+[2025-04-09 16:54:41,193]-[main] INFO  Exposed - Executing alter table statements took 51ms
+[2025-04-09 16:54:41,345]-[main] INFO  Exposed - Checking mapping consistence took 152ms
+[2025-04-09 16:54:41,397]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:41,446]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:41,498]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:41,550]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:41,901]-[main] INFO  Exposed - Extracting column constraints took 351ms
+[2025-04-09 16:54:41,901]-[main] INFO  Exposed - Preparing alter table statements took 455ms
+[2025-04-09 16:54:41,950]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:42,102]-[main] INFO  Exposed - Checking mapping consistence took 152ms
+[2025-04-09 16:54:42,154]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:42,202]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:42,254]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:42,306]-[main] INFO  Exposed - Extracting primary keys took 52ms
+[2025-04-09 16:54:43,010]-[main] INFO  Exposed - Extracting column constraints took 704ms
+[2025-04-09 16:54:43,011]-[main] INFO  Exposed - Preparing alter table statements took 809ms
+[2025-04-09 16:54:43,061]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:43,212]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:43,263]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:43,312]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:43,364]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:43,415]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:43,532]-[main] INFO  Exposed - Extracting column constraints took 117ms
+[2025-04-09 16:54:43,532]-[main] INFO  Exposed - Preparing alter table statements took 220ms
+[2025-04-09 16:54:43,582]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:43,733]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:43,784]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:43,832]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:43,885]-[main] INFO  Exposed - Extracting table columns took 53ms
+[2025-04-09 16:54:43,935]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:44,172]-[main] INFO  Exposed - Extracting column constraints took 236ms
+[2025-04-09 16:54:44,172]-[main] INFO  Exposed - Preparing alter table statements took 340ms
+[2025-04-09 16:54:44,222]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:44,373]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:44,424]-[main] INFO  Exposed - Preparing create tables statements took 49ms
+[2025-04-09 16:54:44,474]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:44,527]-[main] INFO  Exposed - Extracting table columns took 53ms
+[2025-04-09 16:54:44,578]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:45,190]-[main] INFO  Exposed - Extracting column constraints took 612ms
+[2025-04-09 16:54:45,190]-[main] INFO  Exposed - Preparing alter table statements took 716ms
+[2025-04-09 16:54:45,245]-[main] INFO  Exposed - Executing alter table statements took 55ms
+[2025-04-09 16:54:45,429]-[main] INFO  Exposed - Checking mapping consistence took 184ms
+[2025-04-09 16:54:45,493]-[main] INFO  Exposed - Preparing create tables statements took 62ms
+[2025-04-09 16:54:45,548]-[main] INFO  Exposed - Executing create tables statements took 55ms
+[2025-04-09 16:54:45,601]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:45,659]-[main] INFO  Exposed - Extracting primary keys took 57ms
+[2025-04-09 16:54:46,012]-[main] INFO  Exposed - Extracting column constraints took 352ms
+[2025-04-09 16:54:46,012]-[main] INFO  Exposed - Preparing alter table statements took 463ms
+[2025-04-09 16:54:46,075]-[main] INFO  Exposed - Executing alter table statements took 63ms
+[2025-04-09 16:54:46,272]-[main] INFO  Exposed - Checking mapping consistence took 197ms
+[2025-04-09 16:54:46,323]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:46,372]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:46,424]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:46,476]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:46,592]-[main] INFO  Exposed - Extracting column constraints took 116ms
+[2025-04-09 16:54:46,592]-[main] INFO  Exposed - Preparing alter table statements took 220ms
+[2025-04-09 16:54:46,641]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:46,792]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:46,844]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:46,892]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:46,944]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:46,996]-[main] INFO  Exposed - Extracting primary keys took 52ms
+[2025-04-09 16:54:47,716]-[main] INFO  Exposed - Extracting column constraints took 720ms
+[2025-04-09 16:54:47,716]-[main] INFO  Exposed - Preparing alter table statements took 824ms
+[2025-04-09 16:54:47,768]-[main] INFO  Exposed - Executing alter table statements took 52ms
+[2025-04-09 16:54:47,942]-[main] INFO  Exposed - Checking mapping consistence took 174ms
+[2025-04-09 16:54:47,998]-[main] INFO  Exposed - Preparing create tables statements took 55ms
+[2025-04-09 16:54:48,047]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:48,111]-[main] INFO  Exposed - Extracting table columns took 63ms
+[2025-04-09 16:54:48,169]-[main] INFO  Exposed - Extracting primary keys took 57ms
+[2025-04-09 16:54:48,528]-[main] INFO  Exposed - Extracting column constraints took 358ms
+[2025-04-09 16:54:48,529]-[main] INFO  Exposed - Preparing alter table statements took 481ms
+[2025-04-09 16:54:48,578]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:48,729]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:48,782]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:48,831]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:48,884]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:48,935]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:49,294]-[main] INFO  Exposed - Extracting column constraints took 359ms
+[2025-04-09 16:54:49,294]-[main] INFO  Exposed - Preparing alter table statements took 462ms
+[2025-04-09 16:54:49,344]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:49,495]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:49,548]-[main] INFO  Exposed - Preparing create tables statements took 50ms
+[2025-04-09 16:54:49,597]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:49,649]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:49,700]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:49,816]-[main] INFO  Exposed - Extracting column constraints took 116ms
+[2025-04-09 16:54:49,816]-[main] INFO  Exposed - Preparing alter table statements took 219ms
+[2025-04-09 16:54:49,866]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:50,018]-[main] INFO  Exposed - Checking mapping consistence took 152ms
+[2025-04-09 16:54:50,070]-[main] INFO  Exposed - Preparing create tables statements took 50ms
+[2025-04-09 16:54:50,120]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:50,172]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:50,222]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:50,579]-[main] INFO  Exposed - Extracting column constraints took 356ms
+[2025-04-09 16:54:50,579]-[main] INFO  Exposed - Preparing alter table statements took 459ms
+[2025-04-09 16:54:50,627]-[main] INFO  Exposed - Executing alter table statements took 48ms
+[2025-04-09 16:54:50,788]-[main] INFO  Exposed - Checking mapping consistence took 160ms
+[2025-04-09 16:54:50,840]-[main] INFO  Exposed - Preparing create tables statements took 50ms
+[2025-04-09 16:54:50,889]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:50,942]-[main] INFO  Exposed - Extracting table columns took 53ms
+[2025-04-09 16:54:50,993]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:51,106]-[main] INFO  Exposed - Extracting column constraints took 113ms
+[2025-04-09 16:54:51,106]-[main] INFO  Exposed - Preparing alter table statements took 217ms
+[2025-04-09 16:54:51,156]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:51,308]-[main] INFO  Exposed - Checking mapping consistence took 152ms
+[2025-04-09 16:54:51,360]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:51,413]-[main] INFO  Exposed - Executing create tables statements took 53ms
+[2025-04-09 16:54:51,470]-[main] INFO  Exposed - Extracting table columns took 57ms
+[2025-04-09 16:54:51,533]-[main] INFO  Exposed - Extracting primary keys took 63ms
+[2025-04-09 16:54:51,647]-[main] INFO  Exposed - Extracting column constraints took 114ms
+[2025-04-09 16:54:51,647]-[main] INFO  Exposed - Preparing alter table statements took 234ms
+[2025-04-09 16:54:51,697]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:51,850]-[main] INFO  Exposed - Checking mapping consistence took 153ms
+[2025-04-09 16:54:51,901]-[main] INFO  Exposed - Preparing create tables statements took 50ms
+[2025-04-09 16:54:51,950]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:52,002]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:52,053]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:52,167]-[main] INFO  Exposed - Extracting column constraints took 114ms
+[2025-04-09 16:54:52,167]-[main] INFO  Exposed - Preparing alter table statements took 217ms
+[2025-04-09 16:54:52,216]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:52,383]-[main] INFO  Exposed - Checking mapping consistence took 167ms
+[2025-04-09 16:54:52,440]-[main] INFO  Exposed - Preparing create tables statements took 56ms
+[2025-04-09 16:54:52,488]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:52,541]-[main] INFO  Exposed - Extracting table columns took 53ms
+[2025-04-09 16:54:52,592]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:52,942]-[main] INFO  Exposed - Extracting column constraints took 350ms
+[2025-04-09 16:54:52,942]-[main] INFO  Exposed - Preparing alter table statements took 454ms
+[2025-04-09 16:54:52,991]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:53,143]-[main] INFO  Exposed - Checking mapping consistence took 152ms
+[2025-04-09 16:54:53,196]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:53,246]-[main] INFO  Exposed - Executing create tables statements took 50ms
+[2025-04-09 16:54:53,301]-[main] INFO  Exposed - Extracting table columns took 55ms
+[2025-04-09 16:54:53,352]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:53,469]-[main] INFO  Exposed - Extracting column constraints took 117ms
+[2025-04-09 16:54:53,469]-[main] INFO  Exposed - Preparing alter table statements took 223ms
+[2025-04-09 16:54:53,520]-[main] INFO  Exposed - Executing alter table statements took 51ms
+[2025-04-09 16:54:53,678]-[main] INFO  Exposed - Checking mapping consistence took 158ms
+[2025-04-09 16:54:53,732]-[main] INFO  Exposed - Preparing create tables statements took 52ms
+[2025-04-09 16:54:53,784]-[main] INFO  Exposed - Executing create tables statements took 52ms
+[2025-04-09 16:54:53,839]-[main] INFO  Exposed - Extracting table columns took 55ms
+[2025-04-09 16:54:53,892]-[main] INFO  Exposed - Extracting primary keys took 53ms
+[2025-04-09 16:54:54,006]-[main] INFO  Exposed - Extracting column constraints took 114ms
+[2025-04-09 16:54:54,007]-[main] INFO  Exposed - Preparing alter table statements took 223ms
+[2025-04-09 16:54:54,057]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:54:54,208]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:54,260]-[main] INFO  Exposed - Preparing create tables statements took 50ms
+[2025-04-09 16:54:54,318]-[main] INFO  Exposed - Executing create tables statements took 57ms
+[2025-04-09 16:54:54,371]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:54,425]-[main] INFO  Exposed - Extracting primary keys took 54ms
+[2025-04-09 16:54:54,545]-[main] INFO  Exposed - Extracting column constraints took 120ms
+[2025-04-09 16:54:54,545]-[main] INFO  Exposed - Preparing alter table statements took 226ms
+[2025-04-09 16:54:54,599]-[main] INFO  Exposed - Executing alter table statements took 54ms
+[2025-04-09 16:54:54,760]-[main] INFO  Exposed - Checking mapping consistence took 161ms
+[2025-04-09 16:54:54,829]-[main] INFO  Exposed - Preparing create tables statements took 67ms
+[2025-04-09 16:54:54,911]-[main] INFO  Exposed - Executing create tables statements took 82ms
+[2025-04-09 16:54:54,974]-[main] INFO  Exposed - Extracting table columns took 63ms
+[2025-04-09 16:54:55,025]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:55,961]-[main] INFO  Exposed - Extracting column constraints took 936ms
+[2025-04-09 16:54:55,961]-[main] INFO  Exposed - Preparing alter table statements took 1050ms
+[2025-04-09 16:54:56,011]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:56,163]-[main] INFO  Exposed - Checking mapping consistence took 152ms
+[2025-04-09 16:54:56,215]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:56,263]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:54:56,320]-[main] INFO  Exposed - Extracting table columns took 57ms
+[2025-04-09 16:54:56,376]-[main] INFO  Exposed - Extracting primary keys took 56ms
+[2025-04-09 16:54:57,334]-[main] INFO  Exposed - Extracting column constraints took 958ms
+[2025-04-09 16:54:57,334]-[main] INFO  Exposed - Preparing alter table statements took 1071ms
+[2025-04-09 16:54:57,383]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:57,534]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:57,585]-[main] INFO  Exposed - Preparing create tables statements took 50ms
+[2025-04-09 16:54:57,634]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:57,687]-[main] INFO  Exposed - Extracting table columns took 53ms
+[2025-04-09 16:54:57,737]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:57,850]-[main] INFO  Exposed - Extracting column constraints took 112ms
+[2025-04-09 16:54:57,851]-[main] INFO  Exposed - Preparing alter table statements took 217ms
+[2025-04-09 16:54:57,900]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:58,051]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:58,104]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:58,153]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:54:58,214]-[main] INFO  Exposed - Extracting table columns took 61ms
+[2025-04-09 16:54:58,265]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:54:59,463]-[main] INFO  Exposed - Extracting column constraints took 1197ms
+[2025-04-09 16:54:59,463]-[main] INFO  Exposed - Preparing alter table statements took 1310ms
+[2025-04-09 16:54:59,512]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:54:59,663]-[main] INFO  Exposed - Checking mapping consistence took 151ms
+[2025-04-09 16:54:59,715]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:54:59,762]-[main] INFO  Exposed - Executing create tables statements took 47ms
+[2025-04-09 16:54:59,814]-[main] INFO  Exposed - Extracting table columns took 52ms
+[2025-04-09 16:54:59,865]-[main] INFO  Exposed - Extracting primary keys took 51ms
+[2025-04-09 16:54:59,977]-[main] INFO  Exposed - Extracting column constraints took 112ms
+[2025-04-09 16:54:59,977]-[main] INFO  Exposed - Preparing alter table statements took 215ms
+[2025-04-09 16:55:00,027]-[main] INFO  Exposed - Executing alter table statements took 50ms
+[2025-04-09 16:55:00,177]-[main] INFO  Exposed - Checking mapping consistence took 150ms
+[2025-04-09 16:55:00,229]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:55:00,277]-[main] INFO  Exposed - Executing create tables statements took 48ms
+[2025-04-09 16:55:00,331]-[main] INFO  Exposed - Extracting table columns took 54ms
+[2025-04-09 16:55:00,381]-[main] INFO  Exposed - Extracting primary keys took 50ms
+[2025-04-09 16:55:00,612]-[main] INFO  Exposed - Extracting column constraints took 230ms
+[2025-04-09 16:55:00,612]-[main] INFO  Exposed - Preparing alter table statements took 335ms
+[2025-04-09 16:55:00,661]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:55:00,819]-[main] INFO  Exposed - Checking mapping consistence took 158ms
+[2025-04-09 16:55:00,871]-[main] INFO  Exposed - Preparing create tables statements took 51ms
+[2025-04-09 16:55:00,920]-[main] INFO  Exposed - Executing create tables statements took 49ms
+[2025-04-09 16:55:00,972]-[main] INFO  Exposed - Extracting table columns took 51ms
+[2025-04-09 16:55:01,043]-[main] INFO  Exposed - Extracting primary keys took 71ms
+[2025-04-09 16:55:01,889]-[main] INFO  Exposed - Extracting column constraints took 846ms
+[2025-04-09 16:55:01,889]-[main] INFO  Exposed - Preparing alter table statements took 969ms
+[2025-04-09 16:55:01,938]-[main] INFO  Exposed - Executing alter table statements took 49ms
+[2025-04-09 16:55:02,089]-[main] INFO  Exposed - Checking mapping consistence took 150ms
+[2025-04-09 16:55:02,872]-[main] INFO  Exposed - Preparing create tables statements took 175ms
+[2025-04-09 16:55:02,914]-[main] INFO  Exposed - Executing create tables statements took 42ms
+[2025-04-09 16:55:02,963]-[main] INFO  Exposed - Extracting table columns took 49ms
+[2025-04-09 16:55:03,008]-[main] INFO  Exposed - Extracting primary keys took 45ms
+[2025-04-09 16:55:03,191]-[main] INFO  Exposed - Extracting column constraints took 183ms
+[2025-04-09 16:55:03,192]-[main] INFO  Exposed - Preparing alter table statements took 278ms
+[2025-04-09 16:55:03,234]-[main] INFO  Exposed - Executing alter table statements took 42ms
+[2025-04-09 16:55:03,370]-[main] INFO  Exposed - Checking mapping consistence took 136ms
+[2025-04-09 16:55:03,414]-[main] INFO  Exposed - Preparing create tables statements took 43ms
+[2025-04-09 16:55:03,456]-[main] INFO  Exposed - Executing create tables statements took 42ms
+[2025-04-09 16:55:03,503]-[main] INFO  Exposed - Extracting table columns took 47ms
+[2025-04-09 16:55:03,547]-[main] INFO  Exposed - Extracting primary keys took 44ms
+[2025-04-09 16:55:03,682]-[main] INFO  Exposed - Extracting column constraints took 135ms
+[2025-04-09 16:55:03,682]-[main] INFO  Exposed - Preparing alter table statements took 226ms
+[2025-04-09 16:55:03,724]-[main] INFO  Exposed - Executing alter table statements took 42ms
+[2025-04-09 16:55:03,857]-[main] INFO  Exposed - Checking mapping consistence took 133ms
+[2025-04-09 16:55:03,902]-[main] INFO  Exposed - Preparing create tables statements took 44ms
+[2025-04-09 16:55:03,945]-[main] INFO  Exposed - Executing create tables statements took 43ms
+[2025-04-09 16:55:03,992]-[main] INFO  Exposed - Extracting table columns took 47ms
+[2025-04-09 16:55:04,036]-[main] INFO  Exposed - Extracting primary keys took 44ms
+[2025-04-09 16:55:04,170]-[main] INFO  Exposed - Extracting column constraints took 133ms
+[2025-04-09 16:55:04,171]-[main] INFO  Exposed - Preparing alter table statements took 226ms
+[2025-04-09 16:55:04,211]-[main] INFO  Exposed - Executing alter table statements took 40ms
+[2025-04-09 16:55:04,346]-[main] INFO  Exposed - Checking mapping consistence took 134ms
+[2025-04-09 16:55:04,392]-[main] INFO  Exposed - Preparing create tables statements took 45ms
+[2025-04-09 16:55:04,436]-[main] INFO  Exposed - Executing create tables statements took 44ms
+[2025-04-09 16:55:04,483]-[main] INFO  Exposed - Extracting table columns took 47ms
+[2025-04-09 16:55:04,528]-[main] INFO  Exposed - Extracting primary keys took 45ms
+[2025-04-09 16:55:04,795]-[main] INFO  Exposed - Extracting column constraints took 267ms
+[2025-04-09 16:55:04,795]-[main] INFO  Exposed - Preparing alter table statements took 359ms
+[2025-04-09 16:55:04,836]-[main] INFO  Exposed - Executing alter table statements took 41ms
+[2025-04-09 16:55:04,971]-[main] INFO  Exposed - Checking mapping consistence took 134ms
+[2025-04-09 16:55:05,016]-[main] INFO  Exposed - Preparing create tables statements took 44ms
+[2025-04-09 16:55:05,059]-[main] INFO  Exposed - Executing create tables statements took 43ms
+[2025-04-09 16:55:05,105]-[main] INFO  Exposed - Extracting table columns took 46ms
+[2025-04-09 16:55:05,150]-[main] INFO  Exposed - Extracting primary keys took 44ms
+[2025-04-09 16:55:05,415]-[main] INFO  Exposed - Extracting column constraints took 265ms
+[2025-04-09 16:55:05,415]-[main] INFO  Exposed - Preparing alter table statements took 356ms
+[2025-04-09 16:55:05,460]-[main] INFO  Exposed - Executing alter table statements took 45ms
+[2025-04-09 16:55:05,592]-[main] INFO  Exposed - Checking mapping consistence took 132ms
+[2025-04-09 16:55:05,636]-[main] INFO  Exposed - Preparing create tables statements took 43ms
+[2025-04-09 16:55:05,678]-[main] INFO  Exposed - Executing create tables statements took 42ms
+[2025-04-09 16:55:05,726]-[main] INFO  Exposed - Extracting table columns took 48ms
+[2025-04-09 16:55:05,771]-[main] INFO  Exposed - Extracting primary keys took 45ms
+[2025-04-09 16:55:06,041]-[main] INFO  Exposed - Extracting column constraints took 270ms
+[2025-04-09 16:55:06,041]-[main] INFO  Exposed - Preparing alter table statements took 363ms
+[2025-04-09 16:55:06,084]-[main] INFO  Exposed - Executing alter table statements took 43ms
+[2025-04-09 16:55:06,215]-[main] INFO  Exposed - Checking mapping consistence took 131ms
+[2025-04-09 16:55:06,259]-[main] INFO  Exposed - Preparing create tables statements took 43ms
+[2025-04-09 16:55:06,302]-[main] INFO  Exposed - Executing create tables statements took 43ms
+[2025-04-09 16:55:06,348]-[main] INFO  Exposed - Extracting table columns took 46ms
+[2025-04-09 16:55:06,393]-[main] INFO  Exposed - Extracting primary keys took 45ms
+[2025-04-09 16:55:06,792]-[main] INFO  Exposed - Extracting column constraints took 399ms
+[2025-04-09 16:55:06,792]-[main] INFO  Exposed - Preparing alter table statements took 490ms
+[2025-04-09 16:55:06,834]-[main] INFO  Exposed - Executing alter table statements took 42ms
+[2025-04-09 16:55:06,970]-[main] INFO  Exposed - Checking mapping consistence took 136ms
+[2025-04-09 16:55:07,015]-[main] INFO  Exposed - Preparing create tables statements took 43ms
+[2025-04-09 16:55:07,057]-[main] INFO  Exposed - Executing create tables statements took 42ms
+[2025-04-09 16:55:07,108]-[main] INFO  Exposed - Extracting table columns took 50ms
+[2025-04-09 16:55:07,154]-[main] INFO  Exposed - Extracting primary keys took 45ms
+[2025-04-09 16:55:07,422]-[main] INFO  Exposed - Extracting column constraints took 268ms
+[2025-04-09 16:55:07,422]-[main] INFO  Exposed - Preparing alter table statements took 364ms
+[2025-04-09 16:55:07,464]-[main] INFO  Exposed - Executing alter table statements took 42ms
+[2025-04-09 16:55:07,596]-[main] INFO  Exposed - Checking mapping consistence took 132ms
+[2025-04-09 16:55:07,732]-[main] INFO  [Koin] - Started 36 definitions in 2.747 ms
+[2025-04-09 16:55:08,288]-[main] INFO  Application - Application started in 44.989 seconds.
+[2025-04-09 16:55:08,290]-[main] INFO  Application - Application started: io.ktor.server.application.Application@5792c08c
+[2025-04-09 16:55:08,575]-[DefaultDispatcher-worker-1] INFO  Application - Responding at http://localhost:8080
+[2025-04-09 16:55:50,296]-[eventLoopGroupProxy-4-1] INFO  Application - [32m200 OK[m: [36mGET[m - / in 1608ms
+[2025-04-09 16:55:50,431]-[eventLoopGroupProxy-4-1] INFO  Application - [31m500 Internal Server Error[m: [36mGET[m - /favicon.ico in 133ms
