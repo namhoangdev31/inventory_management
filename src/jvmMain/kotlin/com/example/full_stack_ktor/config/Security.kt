@@ -1,7 +1,5 @@
 package com.example.full_stack_ktor.config
 
-import com.auth0.jwt.JWT
-import com.auth0.jwt.algorithms.Algorithm
 import io.ktor.http.*
 import io.ktor.server.application.*
 import io.ktor.server.auth.*
@@ -11,6 +9,8 @@ import io.ktor.server.request.*
 import io.ktor.server.response.*
 import io.ktor.server.sessions.*
 import kotlinx.serialization.Serializable
+import com.auth0.jwt.*
+import com.auth0.jwt.algorithms.*
 
 fun Application.configureSecurity() {
     // Please read the jwt property from the config file if you are using EngineMain
@@ -50,11 +50,11 @@ fun Application.configureSecurity() {
 //            client = HttpClient(Apache)
 //        }
 //    }
-    install(CSRF) {
-        allowOrigin("http://localhost:8080")
-        originMatchesHost()
+//    install(CSRF) {
+//        allowOrigin("http://localhost:8080")
+//        originMatchesHost()
 //        checkHeader("X-CSRF-Token")
-    }
+//    }
     install(Sessions) {
         cookie<MySession>("MY_SESSION") {
             cookie.extensions["SameSite"] = "lax"

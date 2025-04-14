@@ -7,7 +7,7 @@ class UserRepositoryImpl(private val userDao: UserDao,
                          private val userService: UserService
 ) : UserRepository {
     override suspend fun getUser() {
-        userService.getUser()
+        userService.user()
     }
 
     override suspend fun updateUser() {

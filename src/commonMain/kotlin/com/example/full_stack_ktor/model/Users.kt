@@ -1,5 +1,6 @@
 package com.example.full_stack_ktor.model
 
+import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -13,7 +14,6 @@ data class User(
     val image: String? = null,
     val following: Boolean? = null
 ) {
-    // Constructor phụ trợ, phục vụ cho các trường hợp không cung cấp đầy đủ dữ liệu
     constructor(
         id: Int?,
         email: String?,
@@ -23,3 +23,30 @@ data class User(
         image: String?
     ) : this(id, email, null, username, password, bio, image, null)
 }
+
+@Serializable
+data class AuthLoginRequestDto(
+    val email: String,
+    val password: String
+)
+
+@Serializable
+data class AuthLoginResponseDto(
+    @SerialName("access_token")
+    val accessToken: String,
+    val user: AuthLoggedInUserDto
+)
+
+@Serializable
+data class AuthLoggedInUserDto(
+    @SerialName("full_name")
+    val fullName: String
+)
+
+@Serializable
+data class AuthRegisterRequestDto(
+    @SerialName("full_name")
+    val fullName: String,
+    val email: String,
+    val password: String
+)

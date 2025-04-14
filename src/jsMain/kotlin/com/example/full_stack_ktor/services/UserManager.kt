@@ -2,16 +2,13 @@ package com.example.full_stack_ktor.services
 
 import com.example.full_stack_ktor.model.User
 import io.kvision.remote.getService
+import org.w3c.fetch.RequestInit
 
 object UserManager {
-    private val userService = getService<IUserService>()
+    private val userService = getService<IUserService>(
+        requestFilter = null as (suspend RequestInit.() -> Unit)?
+    )
 
-    suspend fun login(email: String?, password: String?): User {
-        return userService.login(email, password)
-    }
-    suspend fun register(username: String?, email: String?, password: String?): User {
-        return userService.register(username, email, password)
-    }
     suspend fun user(): User {
         return userService.user()
     }

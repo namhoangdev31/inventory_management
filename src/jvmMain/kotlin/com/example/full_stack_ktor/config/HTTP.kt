@@ -32,15 +32,15 @@ fun Application.configureHTTP() {
         allowMethod(HttpMethod.Delete)
         allowMethod(HttpMethod.Patch)
         allowHeader(HttpHeaders.Authorization)
-        allowHeader("MyCustomHeader")
-        anyHost() // @TODO: Don't do this in production if possible. Try to limit it.
+        anyHost()
+        maxAgeInSeconds = 3600
     }
-    if (environment.config.property("ktor.deployment.debug").getString() == "false") {
-        install(HttpsRedirect) {
-            sslPort = 443
-            permanentRedirect = true
-        }
-    }
+//    if (environment.config.property("ktor.deployment.debug").getString() == "false") {
+//        install(HttpsRedirect) {
+//            sslPort = 443
+//            permanentRedirect = true
+//        }
+//    }
 //    routing {
 //        openAPI(path = "openapi")
 //    }

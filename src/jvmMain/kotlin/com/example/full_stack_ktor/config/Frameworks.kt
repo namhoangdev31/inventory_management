@@ -38,7 +38,7 @@ fun Application.configureFrameworks() {
 fun authModule() = module {
     single<IAuthService> { AuthService() }
     single<AuthController> { AuthController() }
-    single<AuthRepository> { AuthRepositoryImpl(get(), get()) }
+    single<AuthRepository> { AuthRepositoryImpl(get()) }
 }
 
 fun articleModule() = module {
