@@ -74,17 +74,17 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api("io.kvision:kvision-server-ktor-koin:$kvisionVersion")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
-                implementation("io.ktor:ktor-client-core:$ktorVersion")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-                implementation("io.ktor:ktor-client-auth:$ktorVersion")
-                implementation("io.insert-koin:koin-core:$koinVersion")
-                implementation("io.arrow-kt:arrow-core:2.0.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.2")
-                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
-                implementation("io.ktor:ktor-client-core:3.1.2")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
-                implementation("io.ktor:ktor-client-auth:$ktorVersion")
+//                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
+//                implementation("io.ktor:ktor-client-core:$ktorVersion")
+//                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+//                implementation("io.ktor:ktor-client-auth:$ktorVersion")
+//                implementation("io.insert-koin:koin-core:$koinVersion")
+//                implementation("io.arrow-kt:arrow-core:2.0.1")
+//                implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.2")
+//                implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.8.1")
+//                implementation("io.ktor:ktor-client-core:3.1.2")
+//                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+//                implementation("io.ktor:ktor-client-auth:$ktorVersion")
             }
         }
         val commonTest by getting {
@@ -155,7 +155,6 @@ kotlin {
         }
         val jsMain by getting {
             dependencies {
-                implementation(npm("marked", "^0.6.3"))
                 implementation("io.kvision:kvision:$kvisionVersion")
                 implementation("io.kvision:kvision-bootstrap:$kvisionVersion")
                 implementation("io.kvision:kvision-datetime:$kvisionVersion")
@@ -170,11 +169,11 @@ kotlin {
                 implementation("io.kvision:kvision-print:$kvisionVersion")
                 implementation("io.kvision:kvision-handlebars:$kvisionVersion")
                 implementation("io.kvision:kvision-chart:$kvisionVersion")
+                implementation("io.kvision:kvision-material-js:${kvisionVersion}")
                 implementation("io.kvision:kvision-tabulator:$kvisionVersion")
                 implementation("io.kvision:kvision-maps:$kvisionVersion")
                 implementation("io.kvision:kvision-rest:$kvisionVersion")
                 implementation("io.kvision:kvision-jquery:$kvisionVersion")
-//                implementation("io.kvision:kvision-routing-navigo-ng:$kvisionVersion")
                 implementation("io.kvision:kvision-state:$kvisionVersion")
                 implementation("io.kvision:kvision-state-flow:$kvisionVersion")
                 implementation("io.kvision:kvision-ballast:$kvisionVersion")
@@ -183,12 +182,10 @@ kotlin {
                 implementation("io.kvision:kvision-tom-select-remote:$kvisionVersion")
                 implementation("io.kvision:kvision-tabulator-remote:$kvisionVersion")
                 implementation("io.kvision:kvision-onsenui:$kvisionVersion")
-                implementation("io.insert-koin:koin-core:$koinVersion")
-                implementation("io.kvision:kvision-bootstrap-upload:8.1.1")
-                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:$coroutinesVersion")
-                implementation("io.kvision:kvision-bootstrap-css:5.18.2")
-                implementation("io.ktor:ktor-client-js:$ktorVersion")
-                implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
+                implementation("io.insert-koin:koin-core:${koinVersion}")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:${coroutinesVersion}")
+                implementation("io.ktor:ktor-client-js:${ktorVersion}")
+                implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
                 implementation("io.github.copper-leaf:ballast-navigation:4.2.1")
             }
         }

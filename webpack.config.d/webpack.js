@@ -4,9 +4,9 @@ config.resolve.conditionNames = ['import', 'require', 'default'];
 if (config.devServer) {
     config.devServer.hot = true;
     config.devServer.open = false;
-    config.devServer.port = 3000;
+    config.devServer.port = 3003;
     config.devServer.historyApiFallback = true;
-    config.devServer.compress = false; // workaround for SSE
+    config.devServer.compress = false;
     config.devtool = 'eval-cheap-source-map';
 } else {
     config.devtool = undefined;

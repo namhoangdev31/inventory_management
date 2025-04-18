@@ -1,6 +1,9 @@
 package com.example.full_stack_ktor
 
-import com.example.full_stack_ktor.app.layout.shared.appHeader.appHeader
+import com.copperleaf.ballast.navigation.routing.RouterContract
+import com.copperleaf.ballast.navigation.routing.build
+import com.copperleaf.ballast.navigation.routing.directions
+import com.copperleaf.ballast.navigation.routing.renderCurrentDestination
 import io.kvision.Application
 import io.kvision.html.div
 import io.kvision.panel.root
@@ -11,11 +14,10 @@ import kotlinx.coroutines.asCoroutineDispatcher
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
 import com.example.full_stack_ktor.model.*
-import com.example.full_stack_ktor.repository.auth.AuthRepository
+import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
 import io.kvision.BootstrapCssModule
 import io.kvision.BootstrapIconsModule
 import io.kvision.BootstrapModule
-import io.kvision.BootstrapUploadModule
 import io.kvision.ChartModule
 import io.kvision.CoreModule
 import io.kvision.DatetimeModule
@@ -30,6 +32,8 @@ import io.kvision.ToastifyModule
 import io.kvision.TomSelectModule
 import io.kvision.module
 import io.kvision.startApplication
+import io.kvision.toast.Toast
+import kotlin.getValue
 
 val AppScope = CoroutineScope(window.asCoroutineDispatcher())
 
@@ -42,36 +46,31 @@ class App : Application(), KoinComponent {
     }
 
     override fun start(state: Map<String, Any>) {
-        val root = root("kvapp") {
+        root("kvapp") {
             val router by inject<AppRouterViewModel>()
-            val authRepo by inject<AuthRepository>()
-
-            div().bind(router) { appRouterState ->
+            main().bind(router) { appRouterState ->
                 val routerState = appRouterState.backstack
-
-                appHeader()
-
                 routerState.renderCurrentDestination(
                     route = { appRouter ->
                         when (appRouter) {
-                            AppRouter.Home -> {
-                                landingPage()
+                            AppRouter.Root -> div(className = "container") {
+                                + "Welcome to the Home Page"
                             }
-                            AppRouter.Login -> {
-                                loginPage()
+                            AppRouter.Home -> loginPage()
+	                        AppRouter.Login -> div {
+                                + "Welcome to the Home Page"
                             }
-                            AppRouter.Signup -> {
-                                signupPage()
+	                        AppRouter.Signup -> div {
+                                + "Welcome to the Home Page"
                             }
-                            AppRouter.ContactList -> {
-                                contactListPage()
+	                        AppRouter.ContactList -> div {
+                                + "Welcome to the Home Page"
                             }
-                            AppRouter.ContactAdd -> {
-                                contactAddPage()
+	                        AppRouter.ContactAdd -> div {
+                                + "Welcome to the Home Page"
                             }
-                            AppRouter.ContactDetail -> {
-                                val contactUid by stringPath("uid")
-                                contactDetailPage(contactUid)
+	                        AppRouter.ContactDetail -> div {
+                                + "Welcome to the Home Page"
                             }
                         }
                     },
@@ -86,9 +85,6 @@ class App : Application(), KoinComponent {
                     }
                 )
             }
-
-            // Initialize Auth Repo
-            authRepo.initialize()
         }
     }
 }
@@ -106,9 +102,6 @@ fun main() {
         FontAwesomeModule,
         BootstrapIconsModule,
         PrintModule,
-        BootstrapCssModule,
-        BootstrapUploadModule,
-
         ChartModule,
         TabulatorModule,
         TabulatorCssBootstrapModule,
