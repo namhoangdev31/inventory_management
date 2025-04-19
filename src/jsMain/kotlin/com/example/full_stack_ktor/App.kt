@@ -41,11 +41,12 @@ val AppScope = CoroutineScope(window.asCoroutineDispatcher())
 class App : Application(), KoinComponent {
 
     init {
-        io.kvision.require("css/tailwind.css")
         io.kvision.require("css/kvapp.css")
         io.kvision.require("css/base.css")
         io.kvision.require("css/components.css")
         io.kvision.require("css/utilities.css")
+        io.kvision.require("css/media.css")
+        io.kvision.require("css/util.css")
     }
 
     override fun start(state: Map<String, Any>) {
