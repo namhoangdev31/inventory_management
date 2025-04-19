@@ -8,6 +8,7 @@ import com.copperleaf.ballast.navigation.routing.*
 import com.copperleaf.ballast.navigation.browser.withBrowserHistoryRouter
 import com.copperleaf.ballast.navigation.vm.BasicRouter
 import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.serialization.Serializable
 import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
@@ -41,5 +42,7 @@ class AppRouterViewModel(
 )
 
 val routerModule = module {
-    singleOf(::AppRouterViewModel)
+    single { CoroutineScope(Dispatchers.Main) }
+    single { BallastViewModelConfiguration.Builder() }
+    single { AppRouterViewModel(get(), get()) }
 }

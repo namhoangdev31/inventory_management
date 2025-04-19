@@ -33,6 +33,7 @@ import io.kvision.TomSelectModule
 import io.kvision.module
 import io.kvision.startApplication
 import io.kvision.toast.Toast
+import org.koin.core.context.GlobalContext.startKoin
 import kotlin.getValue
 
 val AppScope = CoroutineScope(window.asCoroutineDispatcher())
@@ -40,16 +41,17 @@ val AppScope = CoroutineScope(window.asCoroutineDispatcher())
 class App : Application(), KoinComponent {
 
     init {
-        io.kvision.require("css/auth.css")
-        io.kvision.require("css/dashboard.css")
+        io.kvision.require("css/tailwind.min.css")
+        io.kvision.require("css/tailwind.css")
         io.kvision.require("css/kvapp.css")
     }
 
     override fun start(state: Map<String, Any>) {
         root("kvapp") {
             val router by inject<AppRouterViewModel>()
-            main().bind(router) { appRouterState ->
+            div().bind(router) { appRouterState ->
                 val routerState = appRouterState.backstack
+                console.log("Router State: $appRouterState")
                 routerState.renderCurrentDestination(
                     route = { appRouter ->
                         when (appRouter) {
@@ -90,6 +92,9 @@ class App : Application(), KoinComponent {
 }
 
 fun main() {
+    startKoin {
+        modules(routerModule)
+    }
     startApplication(
         ::App,
         module.hot,
@@ -101,6 +106,7 @@ fun main() {
         ToastifyModule,
         FontAwesomeModule,
         BootstrapIconsModule,
+//        BootstrapCssModule,
         PrintModule,
         ChartModule,
         TabulatorModule,

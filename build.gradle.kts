@@ -36,6 +36,7 @@ val koinVersion: String by project
 val bcryptVersion: String by project
 val coroutinesVersion: String by project
 val flaxoosVersion: String by project
+val kvisionTailwindCssVersion: String by project
 
 val mainClassName = "io.ktor.server.netty.EngineMain"
 
@@ -74,6 +75,7 @@ kotlin {
         val commonMain by getting {
             dependencies {
                 api("io.kvision:kvision-server-ktor-koin:$kvisionVersion")
+//                implementation("io.kvision:kvision-common-remote:$kvisionVersion")
 //                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
 //                implementation("io.ktor:ktor-client-core:$ktorVersion")
 //                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
@@ -181,12 +183,15 @@ kotlin {
                 implementation("io.kvision:kvision-select-remote:$kvisionVersion")
                 implementation("io.kvision:kvision-tom-select-remote:$kvisionVersion")
                 implementation("io.kvision:kvision-tabulator-remote:$kvisionVersion")
+//                implementation("io.kvision:kvision-tailwindcss:$kvisionTailwindCssVersion")
+//                implementation("io.kvision:kvision-tailwindcss-js:$kvisionTailwindCssVersion")
                 implementation("io.kvision:kvision-onsenui:$kvisionVersion")
                 implementation("io.insert-koin:koin-core:${koinVersion}")
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:${coroutinesVersion}")
                 implementation("io.ktor:ktor-client-js:${ktorVersion}")
                 implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
                 implementation("io.github.copper-leaf:ballast-navigation:4.2.1")
+                implementation("io.kvision:kvision-bootstrap-css:5.18.2")
             }
         }
         val jsTest by getting {
