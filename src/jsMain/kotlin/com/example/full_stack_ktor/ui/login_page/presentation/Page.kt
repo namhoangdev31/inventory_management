@@ -20,7 +20,6 @@ data class LoginFormDto(
 
 fun Container.loginPage(): KoinComponent = object : KoinComponent {
     private val loginViewModel by inject<LoginViewModel>()
-
     init {
         div(className = "relative flex flex-row p-8 gap-4 min-h-screen justify-center items-center min-w-full") {
             div(className = "flex-1 md:flex hidden justify-center items-center") {
