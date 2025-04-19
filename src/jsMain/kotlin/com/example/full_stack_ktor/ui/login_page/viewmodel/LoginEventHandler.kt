@@ -16,5 +16,32 @@ class LoginEventHandler : EventHandler<
 		is LoginContract.Events.NavigateUp -> {
 		
 		}
+		is LoginContract.Events.ShowError -> {
+			// Handle showing error
+		}
+		is LoginContract.Events.ShowSuccess -> {
+			// Handle showing success
+		}
+		is LoginContract.Events.ShowLoading -> {
+			// Handle showing loading
+		}
+		is LoginContract.Events.ShowToast -> {
+			// Handle showing toast
+		}
+		is LoginContract.Events.ShowSnackbar -> {
+			// Handle showing snackbar
+		}
+		is LoginContract.Events.NavigateTo -> {
+			// Handle navigation
+		}
+		is LoginContract.Events.NavigateToWithArgs -> {
+			// Handle navigation with arguments
+		}
+		is LoginContract.Events.ShowDialog -> {
+			// Handle showing dialog
+		}
+		is LoginContract.Events.ShowBottomSheet -> {
+			// Handle showing bottom sheet
+		}
 	}
 }

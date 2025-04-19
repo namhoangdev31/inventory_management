@@ -36,19 +36,19 @@ fun Application.configureFrameworks() {
 }
 
 fun authModule() = module {
-    single<IAuthService> { AuthService() }
+//    single<IAuthService> { AuthService() }
     single<AuthController> { AuthController() }
     single<AuthRepository> { AuthRepositoryImpl(get()) }
 }
 
 fun articleModule() = module {
-    single<IArticleService> { ArticleService() }
+//    single<IArticleService> { ArticleService() }
 }
 
 fun userModule() = module {
-    single<IUserService> { UserService() }
+//    single<IUserService> { UserService() }
     single<UserController> { UserController() }
-    single<UserRepository> { UserRepositoryImpl(get(), get()) }
+    single<UserRepository> { UserRepositoryImpl(get()) }
 }
 
 fun appDaoModule() = module {

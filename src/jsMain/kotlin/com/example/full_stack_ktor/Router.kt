@@ -35,7 +35,7 @@ class AppRouterViewModel(
     config: BallastViewModelConfiguration.Builder
 ) : BasicRouter<AppRouter>(
     config = config
-        .withBrowserHistoryRouter(RoutingTable.fromEnum(AppRouter.entries.toTypedArray()), initialRoute = AppRouter.Home)
+        .withBrowserHistoryRouter(RoutingTable.fromEnum(AppRouter.entries.toTypedArray()), initialRoute = AppRouter.Root)
         .build(),
     eventHandler = eventHandler { },
     coroutineScope = coroutineScope

@@ -5,19 +5,19 @@ import com.example.full_stack_ktor.models.RegisterRequest
 import com.example.full_stack_ktor.exceptions.AuthenticationException
 import com.example.full_stack_ktor.model.LoginRequest
 import com.example.full_stack_ktor.repositories.AuthRepository
-import com.example.full_stack_ktor.services.IAuthService
+//import com.example.full_stack_ktor.services.IAuthService
 import io.ktor.server.application.*
 import io.ktor.server.request.*
 import io.ktor.server.response.*
 import org.koin.java.KoinJavaComponent.inject
 
 class AuthController {
-    private val authService: IAuthService by inject(IAuthService::class.java)
+//    private val authService: IAuthService by inject(IAuthService::class.java)
     suspend fun login(call: ApplicationCall) {
         val postParam = call.receive<LoginRequest>()
         try {
-            val response = authService.login(postParam)
-            call.respond(response)
+//            val response = authService.login(postParam)
+//            call.respond(response)
         } catch (e: AuthenticationException) {
             throw AuthenticationException(e.message ?: "Authentication failed")
         }
@@ -25,9 +25,10 @@ class AuthController {
 
     suspend fun register(call: ApplicationCall) {
         try {
-            val postParam = call.receive<RegisterRequest>()
-            val response = authService.register(postParam.username , postParam.password)
-            call.respond(response)
+//            val postParam = call.receive<RegisterRequest>()
+//            val response = authService.register(postParam.username , postParam.password)
+//            call.respond(response)
+
         } catch (e: AuthenticationException) {
             throw AuthenticationException(e.message ?: "Authentication failed")
         }

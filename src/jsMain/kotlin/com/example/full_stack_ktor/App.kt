@@ -4,37 +4,19 @@ import com.copperleaf.ballast.navigation.routing.RouterContract
 import com.copperleaf.ballast.navigation.routing.build
 import com.copperleaf.ballast.navigation.routing.directions
 import com.copperleaf.ballast.navigation.routing.renderCurrentDestination
-import io.kvision.Application
+import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
+import com.example.full_stack_ktor.ui.login_page.viewmodel.loginModule
+import io.kvision.*
 import io.kvision.html.div
 import io.kvision.panel.root
 import io.kvision.state.bind
+import io.kvision.toast.Toast
 import kotlinx.browser.window
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import com.example.full_stack_ktor.model.*
-import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
-import io.kvision.BootstrapCssModule
-import io.kvision.BootstrapIconsModule
-import io.kvision.BootstrapModule
-import io.kvision.ChartModule
-import io.kvision.CoreModule
-import io.kvision.DatetimeModule
-import io.kvision.FontAwesomeModule
-import io.kvision.ImaskModule
-import io.kvision.MapsModule
-import io.kvision.PrintModule
-import io.kvision.RichTextModule
-import io.kvision.TabulatorCssBootstrapModule
-import io.kvision.TabulatorModule
-import io.kvision.ToastifyModule
-import io.kvision.TomSelectModule
-import io.kvision.module
-import io.kvision.startApplication
-import io.kvision.toast.Toast
 import org.koin.core.context.GlobalContext.startKoin
-import kotlin.getValue
 
 val AppScope = CoroutineScope(window.asCoroutineDispatcher())
 
@@ -68,23 +50,28 @@ class App : Application(), KoinComponent {
                     route = { appRouter ->
                         when (appRouter) {
                             AppRouter.Root -> div(className = "container") {
-                                + "Welcome to the Home Page"
+                                +"Welcome to the Home Page"
                             }
+
                             AppRouter.Home -> loginPage()
-	                        AppRouter.Login -> div {
-                                + "Welcome to the Home Page"
+                            AppRouter.Login -> div {
+                                +"Welcome to the Home Page"
                             }
-	                        AppRouter.Signup -> div {
-                                + "Welcome to the Home Page"
+
+                            AppRouter.Signup -> div {
+                                +"Welcome to the Home Page"
                             }
-	                        AppRouter.ContactList -> div {
-                                + "Welcome to the Home Page"
+
+                            AppRouter.ContactList -> div {
+                                +"Welcome to the Home Page"
                             }
-	                        AppRouter.ContactAdd -> div {
-                                + "Welcome to the Home Page"
+
+                            AppRouter.ContactAdd -> div {
+                                +"Welcome to the Home Page"
                             }
-	                        AppRouter.ContactDetail -> div {
-                                + "Welcome to the Home Page"
+
+                            AppRouter.ContactDetail -> div {
+                                +"Welcome to the Home Page"
                             }
                         }
                     },
@@ -105,7 +92,7 @@ class App : Application(), KoinComponent {
 
 fun main() {
     startKoin {
-        modules(routerModule)
+        modules(routerModule, loginModule)
     }
     startApplication(
         ::App,
@@ -116,13 +103,9 @@ fun main() {
         TomSelectModule,
         ImaskModule,
         ToastifyModule,
-        FontAwesomeModule,
-        BootstrapIconsModule,
-//        BootstrapCssModule,
         PrintModule,
         ChartModule,
         TabulatorModule,
-        TabulatorCssBootstrapModule,
         MapsModule,
         CoreModule,
     )

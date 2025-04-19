@@ -4309,7 +4309,7 @@
         display: inline;
     }
     .md\:flex {
-        display: flex;
+        display: flex !important;
     }
     .md\:inline-flex {
         display: inline-flex;

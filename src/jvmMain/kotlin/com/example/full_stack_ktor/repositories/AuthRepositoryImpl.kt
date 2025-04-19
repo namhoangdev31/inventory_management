@@ -9,8 +9,7 @@ import com.example.full_stack_ktor.model.LoginRequest
 import com.example.full_stack_ktor.model.LoginResponse
 import com.example.full_stack_ktor.models.AuthRequest
 import com.example.full_stack_ktor.models.*
-import com.example.full_stack_ktor.services.AuthService
-import com.example.full_stack_ktor.services.IAuthService
+//import com.example.full_stack_ktor.services.AuthService
 import io.ktor.server.application.ApplicationEnvironment
 import kotlinx.datetime.Clock
 import kotlinx.datetime.TimeZone

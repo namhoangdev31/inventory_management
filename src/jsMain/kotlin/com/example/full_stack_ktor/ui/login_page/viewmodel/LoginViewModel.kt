@@ -5,6 +5,7 @@ import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.build
 import com.copperleaf.ballast.withViewModel
 import kotlinx.coroutines.CoroutineScope
+import org.koin.dsl.module
 
 class LoginViewModel(
 	coroutineScope: CoroutineScope,
@@ -23,3 +24,7 @@ class LoginViewModel(
 		.build(),
 	eventHandler = LoginEventHandler(),
 )
+
+val loginModule = module {
+	single { LoginViewModel(get(), get()) }
+}
