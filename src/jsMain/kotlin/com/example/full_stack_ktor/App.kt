@@ -46,7 +46,16 @@ class App : Application(), KoinComponent {
         io.kvision.require("css/components.css")
         io.kvision.require("css/utilities.css")
         io.kvision.require("css/media.css")
-        io.kvision.require("css/util.css")
+        io.kvision.require("css/media_md.css")
+        io.kvision.require("css/media_lg.css")
+        io.kvision.require("css/media_xl.css")
+        io.kvision.require("css/media_2xl.css")
+        io.kvision.require("css/utilities_sm.css")
+        io.kvision.require("css/utilities_md.css")
+        io.kvision.require("css/utilities_lg.css")
+        io.kvision.require("css/utilities_xl.css")
+        io.kvision.require("css/utilities_2xl.css")
+        io.kvision.require("css/utilities_two.css")
     }
 
     override fun start(state: Map<String, Any>) {
