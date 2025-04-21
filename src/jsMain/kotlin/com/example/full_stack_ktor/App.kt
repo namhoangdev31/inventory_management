@@ -25,6 +25,25 @@ import org.koin.core.component.inject
 
 val AppScope = CoroutineScope(window.asCoroutineDispatcher())
 
+fun main() {
+    initializeKoin()
+    startApplication(
+        ::App,
+        module.hot,
+        BootstrapModule,
+        DatetimeModule,
+        RichTextModule,
+        TomSelectModule,
+        ImaskModule,
+        ToastifyModule,
+        PrintModule,
+        ChartModule,
+        TabulatorModule,
+        MapsModule,
+        CoreModule,
+    )
+}
+
 class App : Application(), KoinComponent {
 
     init {
@@ -57,7 +76,7 @@ class App : Application(), KoinComponent {
                             AppRouter.Home -> homePage()
                             AppRouter.Login -> loginPage()
                             AppRouter.Signup -> registerPage()
-                            AppRouter.About ->  div { +"About Page" }
+                            AppRouter.About -> div { +"About Page" }
                             AppRouter.CMSHeader -> div { +"CMS Header Page" }
                             AppRouter.CMSContent -> div { +"CMS Content Page" }
                             AppRouter.CMSPage -> div { +"CMS Page Page" }
@@ -84,23 +103,4 @@ class App : Application(), KoinComponent {
             }
         }
     }
-}
-
-fun main() {
-    initializeKoin()
-    startApplication(
-        ::App,
-        module.hot,
-        BootstrapModule,
-        DatetimeModule,
-        RichTextModule,
-        TomSelectModule,
-        ImaskModule,
-        ToastifyModule,
-        PrintModule,
-        ChartModule,
-        TabulatorModule,
-        MapsModule,
-        CoreModule,
-    )
 }
