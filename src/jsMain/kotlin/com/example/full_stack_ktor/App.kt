@@ -8,6 +8,7 @@ import com.example.full_stack_ktor.ui.app.AppRouter
 import com.example.full_stack_ktor.ui.app.AppRouterViewModel
 import com.example.full_stack_ktor.ui.app.initializeKoin
 import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
+import com.example.full_stack_ktor.ui.cms.login.loginCMSAdminPage
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage
 import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
 import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
@@ -49,7 +50,6 @@ class App : Application(), KoinComponent {
             val router by inject<AppRouterViewModel>()
             div().bind(router) { appRouterState ->
                 val routerState = appRouterState.backstack
-                console.log("Router State: $appRouterState")
                 routerState.renderCurrentDestination(
                     route = { appRouter ->
                         when (appRouter) {
@@ -68,7 +68,7 @@ class App : Application(), KoinComponent {
                             AppRouter.CMSFooter -> div { +"CMS Footer Page" }
                             AppRouter.CMSCategories -> div { +"CMS Categories" }
                             AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
-                            AppRouter.CMSLogin -> div { +"CMS Login Page" }
+                            AppRouter.CMSLogin -> loginCMSAdminPage()
                         }
                     },
                     notFound = {

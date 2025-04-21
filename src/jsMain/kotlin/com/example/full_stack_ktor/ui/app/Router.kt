@@ -7,6 +7,7 @@ import com.copperleaf.ballast.eventHandler
 import com.copperleaf.ballast.navigation.browser.withBrowserHistoryRouter
 import com.copperleaf.ballast.navigation.routing.*
 import com.copperleaf.ballast.navigation.vm.BasicRouter
+import com.example.full_stack_ktor.util.CookieFacade
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.serialization.Serializable
 import org.koin.core.module.dsl.singleOf
