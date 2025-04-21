@@ -4,8 +4,12 @@ import com.copperleaf.ballast.navigation.routing.RouterContract
 import com.copperleaf.ballast.navigation.routing.build
 import com.copperleaf.ballast.navigation.routing.directions
 import com.copperleaf.ballast.navigation.routing.renderCurrentDestination
+import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
+import com.example.full_stack_ktor.ui.home_page.presentation.homePage
 import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
 import com.example.full_stack_ktor.ui.login_page.viewmodel.loginModule
+import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
+import com.example.full_stack_ktor.ui.register_page.registerModule
 import io.kvision.*
 import io.kvision.html.div
 import io.kvision.panel.root
@@ -49,30 +53,21 @@ class App : Application(), KoinComponent {
                 routerState.renderCurrentDestination(
                     route = { appRouter ->
                         when (appRouter) {
-                            AppRouter.Root -> div(className = "container") {
-                                +"Welcome to the Home Page"
-                            }
-
-                            AppRouter.Home -> loginPage()
-                            AppRouter.Login -> div {
-                                +"Welcome to the Home Page"
-                            }
-
-                            AppRouter.Signup -> div {
-                                +"Welcome to the Home Page"
-                            }
-
-                            AppRouter.ContactList -> div {
-                                +"Welcome to the Home Page"
-                            }
-
-                            AppRouter.ContactAdd -> div {
-                                +"Welcome to the Home Page"
-                            }
-
-                            AppRouter.ContactDetail -> div {
-                                +"Welcome to the Home Page"
-                            }
+                            AppRouter.Root -> homePage()
+                            AppRouter.Home -> homePage()
+                            AppRouter.Login -> loginPage()
+                            AppRouter.Signup -> registerPage()
+                            AppRouter.About ->  div { +"About Page" }
+                            AppRouter.CMSHeader -> div { +"CMS Header Page" }
+                            AppRouter.CMSContent -> div { +"CMS Content Page" }
+                            AppRouter.CMSPage -> div { +"CMS Page Page" }
+                            AppRouter.CMSBlog -> div { +"CMS Blog Page" }
+                            AppRouter.CMSPost -> div { +"CMS Post Page" }
+                            AppRouter.CMSAdmin -> adminCmsPage()
+                            AppRouter.CMSMedia -> div { +"CMS Media Page" }
+                            AppRouter.CMSFooter -> div { +"CMS Footer Page" }
+                            AppRouter.CMSCategories -> div { +"CMS Categories" }
+                            AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
                         }
                     },
                     notFound = {
@@ -80,7 +75,7 @@ class App : Application(), KoinComponent {
                         console.log("Route not found! Going home...")
                         router.trySend(
                             RouterContract.Inputs.GoToDestination(
-                                AppRouter.Home.directions().build()
+                                AppRouter.Root.directions().build()
                             )
                         )
                     }
@@ -92,7 +87,7 @@ class App : Application(), KoinComponent {
 
 fun main() {
     startKoin {
-        modules(routerModule, loginModule)
+        modules(routerModule, loginModule , registerModule)
     }
     startApplication(
         ::App,

@@ -113,7 +113,7 @@ fun Container.loginPage(): KoinComponent = object : KoinComponent {
                             p(className = "text-sm") {
                                 +"""Don't have an account?"""
                                 link(className = "text-blue-500", label = "Sign Up") {
-                                    url = "https://www.google.com"
+                                    url = "/signup"
                                 }
                             }
                         }
