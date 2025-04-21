@@ -4,11 +4,21 @@ import io.kvision.core.Container
 import io.kvision.core.onInput
 import io.kvision.html.*
 import io.kvision.form.text.TextArea
+import io.kvision.utils.px
+import io.kvision.utils.vh
+import io.kvision.utils.vw
 
 fun Container.adminCmsPage() {
-    val inputArea = TextArea(
-        rows = 30
-    )
+    val inputArea = TextArea{
+        rows = 40
+        cols = 100
+        width = 50.vw
+        height = 100.vh
+        placeholder = "Enter some text"
+        autofocus = true
+        wrapHard = true
+        padding = 10.px
+    }
     val previewArea = Div(
         className = "w-full h-full border p-4 bg-gray-50 overflow-auto"
     )
@@ -27,7 +37,7 @@ fun Container.adminCmsPage() {
     }
 
     val defaultHtml = """
-        <div class="p-6 bg-white rounded-lg shadow-md">
+        <div class="p-6 bg-white rounded-lg shadow-md rounder-lg">
             <h1 class="text-2xl font-bold text-indigo-600">Hello Tailwind!</h1>
             <p class="text-gray-600 mt-2">This is a preview box styled with Tailwind classes.</p>
             <button class="mt-4 px-4 py-2 bg-indigo-600 text-white rounded hover:bg-indigo-500">Click Me</button>

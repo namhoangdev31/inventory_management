@@ -4,12 +4,13 @@ import com.copperleaf.ballast.navigation.routing.RouterContract
 import com.copperleaf.ballast.navigation.routing.build
 import com.copperleaf.ballast.navigation.routing.directions
 import com.copperleaf.ballast.navigation.routing.renderCurrentDestination
+import com.example.full_stack_ktor.ui.app.AppRouter
+import com.example.full_stack_ktor.ui.app.AppRouterViewModel
+import com.example.full_stack_ktor.ui.app.initializeKoin
 import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage
 import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
-import com.example.full_stack_ktor.ui.login_page.viewmodel.loginModule
 import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
-import com.example.full_stack_ktor.ui.register_page.registerModule
 import io.kvision.*
 import io.kvision.html.div
 import io.kvision.panel.root
@@ -20,28 +21,27 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.asCoroutineDispatcher
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import org.koin.core.context.GlobalContext.startKoin
 
 val AppScope = CoroutineScope(window.asCoroutineDispatcher())
 
 class App : Application(), KoinComponent {
 
     init {
-        io.kvision.require("css/kvapp.css")
-        io.kvision.require("css/base.css")
-        io.kvision.require("css/components.css")
-        io.kvision.require("css/utilities.css")
-        io.kvision.require("css/media.css")
-        io.kvision.require("css/media_md.css")
-        io.kvision.require("css/media_lg.css")
-        io.kvision.require("css/media_xl.css")
-        io.kvision.require("css/media_2xl.css")
-        io.kvision.require("css/utilities_sm.css")
-        io.kvision.require("css/utilities_md.css")
-        io.kvision.require("css/utilities_lg.css")
-        io.kvision.require("css/utilities_xl.css")
-        io.kvision.require("css/utilities_2xl.css")
-        io.kvision.require("css/utilities_two.css")
+        require("css/kvapp.css")
+        require("css/base.css")
+        require("css/components.css")
+        require("css/utilities.css")
+        require("css/media.css")
+        require("css/media_md.css")
+        require("css/media_lg.css")
+        require("css/media_xl.css")
+        require("css/media_2xl.css")
+        require("css/utilities_sm.css")
+        require("css/utilities_md.css")
+        require("css/utilities_lg.css")
+        require("css/utilities_xl.css")
+        require("css/utilities_2xl.css")
+        require("css/utilities_two.css")
     }
 
     override fun start(state: Map<String, Any>) {
@@ -68,6 +68,7 @@ class App : Application(), KoinComponent {
                             AppRouter.CMSFooter -> div { +"CMS Footer Page" }
                             AppRouter.CMSCategories -> div { +"CMS Categories" }
                             AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
+                            AppRouter.CMSLogin -> div { +"CMS Login Page" }
                         }
                     },
                     notFound = {
@@ -86,9 +87,7 @@ class App : Application(), KoinComponent {
 }
 
 fun main() {
-    startKoin {
-        modules(routerModule, loginModule , registerModule)
-    }
+    initializeKoin()
     startApplication(
         ::App,
         module.hot,

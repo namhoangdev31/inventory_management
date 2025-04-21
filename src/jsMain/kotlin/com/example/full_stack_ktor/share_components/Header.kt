@@ -1,6 +1,6 @@
 package com.example.full_stack_ktor.share_components
 
-import com.example.full_stack_ktor.AppRouter
+import com.example.full_stack_ktor.ui.app.AppRouter
 import io.kvision.core.Container
 import io.kvision.html.*
 

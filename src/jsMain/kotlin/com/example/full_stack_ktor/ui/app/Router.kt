@@ -1,4 +1,4 @@
-package com.example.full_stack_ktor
+package com.example.full_stack_ktor.ui.app
 
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.ExperimentalBallastApi
@@ -8,8 +8,8 @@ import com.copperleaf.ballast.navigation.browser.withBrowserHistoryRouter
 import com.copperleaf.ballast.navigation.routing.*
 import com.copperleaf.ballast.navigation.vm.BasicRouter
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.serialization.Serializable
+import org.koin.core.module.dsl.singleOf
 import org.koin.dsl.module
 
 @Serializable
@@ -23,6 +23,7 @@ enum class AppRouter(
     Signup("/signup"),
     About("/about"),
     CMSAdmin("/cms-admin"),
+    CMSLogin("/cms-login"),
     CMSHeader("/cms-admin/header"),
     CMSPage("/cms-admin/page"),
     CMSFooter("/cms-admin/footer"),
@@ -52,7 +53,5 @@ class AppRouterViewModel(
 )
 
 val routerModule = module {
-    single { CoroutineScope(Dispatchers.Main) }
-    single { BallastViewModelConfiguration.Builder() }
-    single { AppRouterViewModel(get(), get()) }
+    singleOf(::AppRouterViewModel)
 }
