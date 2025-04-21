@@ -25,4 +25,5 @@ object UserAccountTable : BaseIntIdTable("user_account") {
     val isActive = bool("is_active").default(false)
     val lastLogin = datetime("last_login").nullable()
     val isAdmin = bool("is_admin").default(false)
+    val adminCmsActive = bool("admin_cms_active").default(false)
 }

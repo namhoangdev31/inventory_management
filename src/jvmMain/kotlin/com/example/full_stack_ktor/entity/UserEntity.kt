@@ -15,5 +15,6 @@ data class UserEntity(
     val lastLogin: LocalDateTime? = null,
     val createdAt: LocalDateTime,
     val updatedAt: LocalDateTime? = null,
-    val isAdmin: Boolean = false
+    val isAdmin: Boolean = false,
+    val adminCmsActive: Boolean = false
 )

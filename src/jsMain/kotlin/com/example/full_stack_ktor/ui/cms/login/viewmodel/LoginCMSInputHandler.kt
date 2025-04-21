@@ -23,5 +23,17 @@ class LoginCMSInputHandler : InputHandler<
 		is LoginCMSContract.Inputs.GoBack -> {
 			postEvent(LoginCMSContract.Events.NavigateUp)
 		}
+		is LoginCMSContract.Inputs.UpdateUsername -> {
+			updateState { it.copy(username = input.username) }
+		}
+		is LoginCMSContract.Inputs.UpdatePassword -> {
+			updateState { it.copy(password = input.password) }
+		}
+		is LoginCMSContract.Inputs.Submit -> {
+			updateState { it.copy(loading = true) }
+			delay(1000)
+			updateState { it.copy(loading = false) }
+			postEvent(LoginCMSContract.Events.SubmitSuccess)
+		}
 	}
 }

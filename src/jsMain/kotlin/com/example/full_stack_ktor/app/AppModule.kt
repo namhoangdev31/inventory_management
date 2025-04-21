@@ -6,8 +6,9 @@ import com.copperleaf.ballast.repository.bus.EventBus
 import com.copperleaf.ballast.repository.bus.EventBusImpl
 import com.example.full_stack_ktor.AppScope
 import com.example.full_stack_ktor.ui.cms.login.loginCMSViewModel
-import com.example.full_stack_ktor.ui.login_page.viewmodel.loginModule
+import com.example.full_stack_ktor.ui.login_page.loginModule
 import com.example.full_stack_ktor.ui.register_page.registerModule
+import com.example.full_stack_ktor.ui.super_admin.superAdminViewModel
 import org.koin.core.context.startKoin
 import org.koin.dsl.module
 
@@ -25,7 +26,8 @@ fun initializeKoin() {
 			routerModule,
 			loginModule,
 			registerModule,
-			loginCMSViewModel
+			loginCMSViewModel,
+			superAdminViewModel
 		)
 	}
 	

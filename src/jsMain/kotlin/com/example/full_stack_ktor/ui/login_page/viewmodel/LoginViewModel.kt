@@ -24,7 +24,3 @@ class LoginViewModel(
 		.build(),
 	eventHandler = LoginEventHandler(),
 )
-
-val loginModule = module {
-	single { LoginViewModel(get(), get()) }
-}

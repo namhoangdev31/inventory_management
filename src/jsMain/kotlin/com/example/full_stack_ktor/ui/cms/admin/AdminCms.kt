@@ -8,57 +8,58 @@ import com.example.full_stack_ktor.app.AppRouterViewModel
 import com.example.full_stack_ktor.util.CookieFacade
 import com.example.full_stack_ktor.util.LocalStorageFacade
 import io.kvision.core.Container
-import io.kvision.html.*
 import io.kvision.form.text.TextArea
+import io.kvision.html.Div
 import io.kvision.html.div
+import io.kvision.html.h1
 import io.kvision.state.bind
 import io.kvision.utils.px
 import io.kvision.utils.vh
 import io.kvision.utils.vw
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
-import kotlin.getValue
 
 fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
-	val router by inject<AppRouterViewModel>()
-	val userToken = CookieFacade.getCookie(LocalStorageFacade.KEY_CMS_ACCESS_TOKEN)
-	
-	init {
-		div().bind(router) { appRouterState ->
-			div(className = "relative"){
-				h1(className = "text-center text-primary text-32") {
-					+"CMS Admin"
-				}
-				div(className = "flex h-screen p-4") {
-					div(className = "w-1/2 h-full") {
-						add(TextArea{
-							rows = 40
-							cols = 100
-							width = 50.vw
-							height = 100.vh
-							placeholder = "Enter some text"
-							autofocus = true
-							wrapHard = true
-							padding = 10.px
-						})
-					}
-					div(className = "w-1/2 h-full") {
-						add(Div(
-							className = "w-full h-full border p-4 bg-gray-50 overflow-auto"
-						))
-					}
-				}
-			}
-			if (userToken == null) {
-				router.trySend(
-					RouterContract.Inputs.GoToDestination(
-						AppRouter.CMSLogin.directions().build()
-					)
-				)
-			}
-			
-		}
-	}
+    val router by inject<AppRouterViewModel>()
+    val userToken = CookieFacade.getCookie(LocalStorageFacade.KEY_CMS_ACCESS_TOKEN)
+
+    init {
+        div().bind(router) { appRouterState ->
+            div(className = "relative") {
+                h1(className = "text-center text-primary text-32") {
+                    +"CMS Admin"
+                }
+                div(className = "flex h-screen p-4") {
+                    div(className = "w-1/2 h-full") {
+                        add(TextArea {
+                            rows = 40
+                            cols = 100
+                            width = 50.vw
+                            height = 100.vh
+                            placeholder = "Enter some text"
+                            autofocus = true
+                            wrapHard = true
+                            padding = 10.px
+                        })
+                    }
+                    div(className = "w-1/2 h-full") {
+                        add(
+                            Div(
+                                className = "w-full h-full border p-4 bg-gray-50 overflow-auto"
+                            )
+                        )
+                    }
+                }
+            }
+            if (userToken == null) {
+                router.trySend(
+                    RouterContract.Inputs.GoToDestination(
+                        AppRouter.CMSLogin.directions().build()
+                    )
+                )
+            }
+        }
+    }
 }
 
 //val inputArea = TextArea{

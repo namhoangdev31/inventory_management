@@ -16,5 +16,20 @@ class LoginCMSEventHandler : EventHandler<
 		is LoginCMSContract.Events.NavigateUp -> {
 		
 		}
+		is LoginCMSContract.Events.ShowError -> {
+
+		}
+		is LoginCMSContract.Events.ShowSuccess -> {
+
+		}
+		is LoginCMSContract.Events.ShowLoading -> {
+
+		}
+		is LoginCMSContract.Events.SubmitSuccess -> {
+
+		}
+		is LoginCMSContract.Events.SubmitFailure -> {
+
+		}
 	}
 }

@@ -22,6 +22,7 @@ enum class AppRouter(
     Login("/login"),
     Signup("/signup"),
     About("/about"),
+    SuperAdmin("/super-admin"),
     CMSAdmin("/cms-admin"),
     CMSLogin("/cms-login"),
     CMSHeader("/cms-admin/header"),

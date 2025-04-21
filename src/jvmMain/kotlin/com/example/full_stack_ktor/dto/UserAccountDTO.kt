@@ -22,6 +22,7 @@ class UserAccountDTO(id: EntityID<Int>) : IntEntity(id) {
     var createdAt by UserAccountTable.createdAt
     var updatedAt by UserAccountTable.updatedAt
     var isAdmin by UserAccountTable.isAdmin
+    var adminCmsActive by UserAccountTable.adminCmsActive
 
     fun toUserEntity() = UserEntity(
         id = id.value,
@@ -34,7 +35,8 @@ class UserAccountDTO(id: EntityID<Int>) : IntEntity(id) {
         lastLogin = lastLogin,
         createdAt = createdAt,
         updatedAt = updatedAt,
-        isAdmin = isAdmin
+        isAdmin = isAdmin,
+        adminCmsActive = adminCmsActive
     )
 
     override fun flush(batch: EntityBatchUpdate?): Boolean {

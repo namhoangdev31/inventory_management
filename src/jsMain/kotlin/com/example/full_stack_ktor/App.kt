@@ -12,6 +12,7 @@ import com.example.full_stack_ktor.ui.cms.login.loginCMSAdminPage
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage
 import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
 import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
+import com.example.full_stack_ktor.ui.super_admin.superAdmin
 import io.kvision.*
 import io.kvision.html.div
 import io.kvision.panel.root
@@ -88,6 +89,7 @@ class App : Application(), KoinComponent {
                             AppRouter.CMSCategories -> div { +"CMS Categories" }
                             AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
                             AppRouter.CMSLogin -> loginCMSAdminPage()
+                            AppRouter.SuperAdmin -> superAdmin()
                         }
                     },
                     notFound = {
