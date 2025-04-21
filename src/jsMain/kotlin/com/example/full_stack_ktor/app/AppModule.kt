@@ -1,4 +1,4 @@
-package com.example.full_stack_ktor.ui.app
+package com.example.full_stack_ktor.app
 
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.core.JsConsoleLogger
@@ -20,9 +20,7 @@ fun initializeKoin() {
 				logger = { message -> JsConsoleLogger(message) }
 			}
 		}
-		
 		single<EventBus> { EventBusImpl() }
-		
 		includes(
 			routerModule,
 			loginModule,

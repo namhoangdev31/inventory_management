@@ -3,12 +3,11 @@ package com.example.full_stack_ktor.ui.cms.admin
 import com.copperleaf.ballast.navigation.routing.RouterContract
 import com.copperleaf.ballast.navigation.routing.build
 import com.copperleaf.ballast.navigation.routing.directions
-import com.example.full_stack_ktor.ui.app.AppRouter
-import com.example.full_stack_ktor.ui.app.AppRouterViewModel
+import com.example.full_stack_ktor.app.AppRouter
+import com.example.full_stack_ktor.app.AppRouterViewModel
 import com.example.full_stack_ktor.util.CookieFacade
 import com.example.full_stack_ktor.util.LocalStorageFacade
 import io.kvision.core.Container
-import io.kvision.core.onInput
 import io.kvision.html.*
 import io.kvision.form.text.TextArea
 import io.kvision.html.div

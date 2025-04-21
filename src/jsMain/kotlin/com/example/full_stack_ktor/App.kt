@@ -4,9 +4,9 @@ import com.copperleaf.ballast.navigation.routing.RouterContract
 import com.copperleaf.ballast.navigation.routing.build
 import com.copperleaf.ballast.navigation.routing.directions
 import com.copperleaf.ballast.navigation.routing.renderCurrentDestination
-import com.example.full_stack_ktor.ui.app.AppRouter
-import com.example.full_stack_ktor.ui.app.AppRouterViewModel
-import com.example.full_stack_ktor.ui.app.initializeKoin
+import com.example.full_stack_ktor.app.AppRouter
+import com.example.full_stack_ktor.app.AppRouterViewModel
+import com.example.full_stack_ktor.app.initializeKoin
 import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
 import com.example.full_stack_ktor.ui.cms.login.loginCMSAdminPage
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage

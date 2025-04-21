@@ -1,6 +1,6 @@
 package com.example.full_stack_ktor.ui.cms.login
 
-import com.example.full_stack_ktor.ui.app.AppRouterViewModel
+import com.example.full_stack_ktor.app.AppRouterViewModel
 import com.example.full_stack_ktor.ui.cms.login.viewmodel.LoginCMSViewModel
 import io.kvision.core.Container
 import io.kvision.html.*
