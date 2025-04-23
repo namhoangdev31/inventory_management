@@ -49,6 +49,7 @@ fun main() {
 		TabulatorModule,
 		MapsModule,
 		CoreModule,
+		BootstrapIconsModule
 	)
 }
 

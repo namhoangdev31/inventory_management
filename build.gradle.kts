@@ -193,6 +193,7 @@ kotlin {
 				implementation("io.ktor:ktor-client-js:${ktorVersion}")
 				implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
 				implementation("io.kvision:kvision-bootstrap-css:5.18.2")
+				implementation("io.kvision:snabbdom-kotlin:1.0.0")
 //				implementation("io.github.copper-leaf:ballast-core:$ballastVersion")
 //              implementation("io.github.copper-leaf:ballast-navigation:$ballastVersion")
 //              implementation("io.kvision:kvision-tailwindcss:$kvisionTailwindCssVersion")
