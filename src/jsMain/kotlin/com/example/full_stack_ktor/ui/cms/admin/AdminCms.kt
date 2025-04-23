@@ -31,7 +31,7 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 			p(className = "text-center text-lg font-bold text-gray-800") {
 				+"CMS Admin"
 			}
-			div(className = "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4") {
+			div(className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4") {
 				// Add your dashboard components here
 				dashBoardComponent(
 					DashBoardComponentProps(
