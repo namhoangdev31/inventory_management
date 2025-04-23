@@ -15,7 +15,6 @@ import org.koin.dsl.module
 fun initializeKoin() {
 	val appModule = module {
 		single { AppScope }
-		
 		factory {
 			BallastViewModelConfiguration.Builder().apply {
 				logger = { message -> JsConsoleLogger(message) }

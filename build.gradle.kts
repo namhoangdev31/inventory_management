@@ -192,11 +192,11 @@ kotlin {
 				implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core-js:${coroutinesVersion}")
 				implementation("io.ktor:ktor-client-js:${ktorVersion}")
 				implementation("io.ktor:ktor-client-content-negotiation:${ktorVersion}")
-//                implementation("io.github.copper-leaf:ballast-core:$ballastVersion")
-//                implementation("io.github.copper-leaf:ballast-navigation:$ballastVersion")
-//                implementation("io.kvision:kvision-tailwindcss:$kvisionTailwindCssVersion")
-//                implementation("io.kvision:kvision-tailwindcss-js:$kvisionTailwindCssVersion")
 				implementation("io.kvision:kvision-bootstrap-css:5.18.2")
+//				implementation("io.github.copper-leaf:ballast-core:$ballastVersion")
+//              implementation("io.github.copper-leaf:ballast-navigation:$ballastVersion")
+//              implementation("io.kvision:kvision-tailwindcss:$kvisionTailwindCssVersion")
+//              implementation("io.kvision:kvision-tailwindcss-js:$kvisionTailwindCssVersion")
 			}
 		}
 		val jsTest by getting {
