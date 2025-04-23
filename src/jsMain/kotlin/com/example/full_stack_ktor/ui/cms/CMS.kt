@@ -59,7 +59,7 @@ fun Container.headerCMSComponent() {
 }
 
 fun Container.footerCMSComponent() {
-	footer(className = "bg-white border-t p-4 text-center text-14 text-gray-500 mt-auto") {
+	footer(className = "bg-white p-4 text-center text-14 text-gray-500 mt-auto") {
 		+"© 2025 PainCMS. All rights reserved."
 	}
 }

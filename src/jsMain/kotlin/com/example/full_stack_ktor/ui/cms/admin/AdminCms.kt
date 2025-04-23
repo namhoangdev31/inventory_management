@@ -27,11 +27,11 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 //                    )
 //                )
 //            }
-		div(className = "relative flex flex-col gap-6").bind(router) { appRouterState ->
+		div(className = "relative flex flex-col gap-6 min-h-screen").bind(router) { appRouterState ->
 			p(className = "text-center text-lg font-bold text-gray-800") {
 				+"CMS Admin"
 			}
-			div(className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4") {
+			div(className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4") {
 				// Add your dashboard components here
 				dashBoardComponent(
 					DashBoardComponentProps(
