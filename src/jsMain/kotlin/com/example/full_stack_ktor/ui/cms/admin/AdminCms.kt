@@ -1,6 +1,8 @@
 package com.example.full_stack_ktor.ui.cms.admin
 
 import com.example.full_stack_ktor.app.AppRouterViewModel
+import com.example.full_stack_ktor.ui.cms.components.DashBoardComponentProps
+import com.example.full_stack_ktor.ui.cms.components.dashBoardComponent
 import com.example.full_stack_ktor.util.CookieFacade
 import com.example.full_stack_ktor.util.LocalStorageFacade
 import io.kvision.core.Container
@@ -12,9 +14,11 @@ import io.kvision.utils.vw
 import io.kvision.utils.set
 import org.koin.core.component.KoinComponent
 import org.koin.core.component.inject
+
 fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 	val router by inject<AppRouterViewModel>()
 	val userToken = CookieFacade.getCookie(LocalStorageFacade.KEY_CMS_ACCESS_TOKEN)
+	
 	init {
 //            if (userToken == null) {
 //                router.trySend(
@@ -23,9 +27,36 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 //                    )
 //                )
 //            }
-		div(className = "relative flex flex-col").bind(router) { appRouterState ->
+		div(className = "relative flex flex-col gap-6").bind(router) { appRouterState ->
 			p(className = "text-center text-lg font-bold text-gray-800") {
 				+"CMS Admin"
+			}
+			div(className = "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4") {
+				// Add your dashboard components here
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Pages",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Products",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Orders",
+						onClick = {
+						
+						}
+					)
+				)
 			}
 		}
 	}
