@@ -1,9 +1,5 @@
 package com.example.full_stack_ktor.ui.cms.admin
 
-import com.copperleaf.ballast.navigation.routing.RouterContract
-import com.copperleaf.ballast.navigation.routing.build
-import com.copperleaf.ballast.navigation.routing.directions
-import com.example.full_stack_ktor.app.AppRouter
 import com.example.full_stack_ktor.app.AppRouterViewModel
 import com.example.full_stack_ktor.util.CookieFacade
 import com.example.full_stack_ktor.util.LocalStorageFacade
@@ -51,13 +47,13 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
                     }
                 }
             }
-            if (userToken == null) {
-                router.trySend(
-                    RouterContract.Inputs.GoToDestination(
-                        AppRouter.CMSLogin.directions().build()
-                    )
-                )
-            }
+//            if (userToken == null) {
+//                router.trySend(
+//                    RouterContract.Inputs.GoToDestination(
+//                        AppRouter.CMSLogin.directions().build()
+//                    )
+//                )
+//            }
         }
     }
 }
