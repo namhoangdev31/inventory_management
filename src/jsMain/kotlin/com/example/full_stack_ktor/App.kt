@@ -2,11 +2,16 @@ package com.example.full_stack_ktor
 
 import com.copperleaf.ballast.navigation.routing.RouterContract
 import com.copperleaf.ballast.navigation.routing.build
+import com.copperleaf.ballast.navigation.routing.currentDestinationOrNull
+import com.copperleaf.ballast.navigation.routing.currentRouteOrNull
 import com.copperleaf.ballast.navigation.routing.directions
 import com.copperleaf.ballast.navigation.routing.renderCurrentDestination
 import com.example.full_stack_ktor.app.AppRouter
 import com.example.full_stack_ktor.app.AppRouterViewModel
 import com.example.full_stack_ktor.app.initializeKoin
+import com.example.full_stack_ktor.share_components.footerMasterComponent
+import com.example.full_stack_ktor.share_components.headerMasterComponent
+import com.example.full_stack_ktor.share_components.sideBarComponent
 import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
 import com.example.full_stack_ktor.ui.cms.login.loginCMSAdminPage
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage
@@ -15,6 +20,8 @@ import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
 import com.example.full_stack_ktor.ui.super_admin.superAdmin
 import io.kvision.*
 import io.kvision.html.div
+import io.kvision.html.footer
+import io.kvision.html.header
 import io.kvision.panel.root
 import io.kvision.state.bind
 import io.kvision.toast.Toast
@@ -65,9 +72,20 @@ class App : Application(), KoinComponent {
 		require("css/utilities_two.css")
 	}
 	
+	val routesWithoutHeaderFooter = setOf(
+		AppRouter.Login,
+		AppRouter.Signup,
+		AppRouter.CMSLogin
+	)
+	
 	override fun start(state: Map<String, Any>) {
 		root("kvapp") {
 			val router by inject<AppRouterViewModel>()
+			header().bind(router) { appRouterState ->
+				headerMasterComponent(
+					appRouterState.backstack.currentDestinationOrNull?.originalRoute ?: AppRouter.Root
+				)
+			}
 			div().bind(router) { appRouterState ->
 				val routerState = appRouterState.backstack
 				routerState.renderCurrentDestination(
@@ -101,6 +119,11 @@ class App : Application(), KoinComponent {
 							)
 						)
 					}
+				)
+			}
+			footer().bind(router) { appRouterState ->
+				footerMasterComponent(
+					appRouterState.backstack.currentDestinationOrNull?.originalRoute ?: AppRouter.Root
 				)
 			}
 		}
