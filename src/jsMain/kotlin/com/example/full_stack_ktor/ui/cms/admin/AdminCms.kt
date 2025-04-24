@@ -27,12 +27,10 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 //                    )
 //                )
 //            }
-		div(className = "relative flex flex-col gap-6 min-h-screen container mx-auto").bind(router) { appRouterState ->
-			p(className = "text-center text-lg font-bold text-gray-800") {
-				+"CMS Admin"
-			}
-			div(className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4") {
-				// Add your dashboard components here
+		div(className = "relative flex flex-col gap-6 min-h-screen sm:container sm:mx-auto mx-4").bind(router) { appRouterState ->
+			div(className ="w-full py-4 px-5 bg-green-200 text-xl font-medium") { +"""Welcome to your dashboard""" }
+			h1(className = "text-3xl font-bold px-4") { +"""Collections""" }
+			div(className = "grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4") {
 				dashBoardComponent(
 					DashBoardComponentProps(
 						title = "Pages",
@@ -89,11 +87,15 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 						}
 					)
 				)
+
+			}
+			h1(className = "text-3xl font-bold px-4") { +"""Settings""" }
+			div(className = "grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4") {
 				dashBoardComponent(
 					DashBoardComponentProps(
 						title = "Globals",
 						onClick = {
-						
+
 						}
 					)
 				)
@@ -101,7 +103,7 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 					DashBoardComponentProps(
 						title = "Settings",
 						onClick = {
-						
+
 						}
 					)
 				)
