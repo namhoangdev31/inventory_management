@@ -27,7 +27,7 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 //                    )
 //                )
 //            }
-		div(className = "relative flex flex-col gap-6 min-h-screen").bind(router) { appRouterState ->
+		div(className = "relative flex flex-col gap-6 min-h-screen container mx-auto").bind(router) { appRouterState ->
 			p(className = "text-center text-lg font-bold text-gray-800") {
 				+"CMS Admin"
 			}
@@ -52,6 +52,54 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 				dashBoardComponent(
 					DashBoardComponentProps(
 						title = "Orders",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Media",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Categories",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Users",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Redirects",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Globals",
+						onClick = {
+						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Settings",
 						onClick = {
 						
 						}

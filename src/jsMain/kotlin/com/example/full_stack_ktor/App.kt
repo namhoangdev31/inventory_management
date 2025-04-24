@@ -49,7 +49,8 @@ fun main() {
 		TabulatorModule,
 		MapsModule,
 		CoreModule,
-		BootstrapIconsModule
+		BootstrapIconsModule,
+		FontAwesomeModule,
 	)
 }
 
