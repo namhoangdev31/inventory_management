@@ -18,7 +18,7 @@ import org.koin.core.component.inject
 fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 	val router by inject<AppRouterViewModel>()
 	val userToken = CookieFacade.getCookie(LocalStorageFacade.KEY_CMS_ACCESS_TOKEN)
-	
+
 	init {
 //            if (userToken == null) {
 //                router.trySend(
@@ -36,6 +36,13 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 						title = "Pages",
 						onClick = {
 						
+						}
+					)
+				)
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Blogs",
+						onClick = {
 						}
 					)
 				)
@@ -73,24 +80,23 @@ fun Container.adminCmsPage(): KoinComponent = object : KoinComponent {
 				)
 				dashBoardComponent(
 					DashBoardComponentProps(
-						title = "Users",
-						onClick = {
-						
-						}
-					)
-				)
-				dashBoardComponent(
-					DashBoardComponentProps(
 						title = "Redirects",
 						onClick = {
 						
 						}
 					)
 				)
-
 			}
 			h1(className = "text-3xl font-bold px-4") { +"""Settings""" }
 			div(className = "grid grid-cols-2 lg:grid-cols-4 xl:grid-cols-5 gap-4 px-4") {
+				dashBoardComponent(
+					DashBoardComponentProps(
+						title = "Users",
+						onClick = {
+
+						}
+					)
+				)
 				dashBoardComponent(
 					DashBoardComponentProps(
 						title = "Globals",

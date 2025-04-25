@@ -25,32 +25,41 @@ enum class AppRouter(
     SuperAdmin("/super-admin"),
     CMSAdmin("/cms-admin"),
     CMSLogin("/cms-login"),
-    CMSHeader("/cms-admin/header"),
-    CMSPage("/cms-admin/page"),
-    CMSFooter("/cms-admin/footer"),
-    CMSSiderBar("/cms-admin/sidebar"),
-    CMSContent("/cms-admin/content"),
-    CMSMedia("/cms-admin/media"),
-    CMSCategories("/cms-admin/categories"),
-    CMSPost("/cms-admin/post"),
-    CMSBlog("/cms-admin/blog");
+    CMSHeader("/cms-header"),
+    CMSPage("/cms-pages"),
+    CMSFooter("/cms-footer"),
+    CMSSiderBar("/cms-sidebar"),
+    CMSContent("/cms-content"),
+    CMSMedia("/cms-media/media"),
+    CMSCategories("/cms-categories"),
+    CMSPost("/cms-posts"),
+    CMSPostDetail("/cms-posts/:postId"),
+    CMSBlog("/cms-blogs");
 
     override val matcher: RouteMatcher = RouteMatcher.create(routeFormat)
 }
 
 @OptIn(ExperimentalBallastApi::class)
 class AppRouterViewModel(
-    coroutineScope: CoroutineScope,
+    viewModelCoroutineScope: CoroutineScope,
     config: BallastViewModelConfiguration.Builder
 ) : BasicRouter<AppRouter>(
     config = config
         .withBrowserHistoryRouter(
             RoutingTable.fromEnum(AppRouter.entries.toTypedArray()),
-            initialRoute = AppRouter.Root
+            initialRoute = AppRouter.Home,
+            basePath = "/"
         )
         .build(),
-    eventHandler = eventHandler { },
-    coroutineScope = coroutineScope
+    eventHandler = eventHandler { event ->
+        when (event) {
+            is RouterContract.Events.BackstackChanged -> {
+                console.log(event.backstack.currentDestinationOrNull , "Backstack changed")
+            }
+            else -> error("Unexpected event: $event")
+        }
+    },
+    coroutineScope = viewModelCoroutineScope
 )
 
 val routerModule = module {

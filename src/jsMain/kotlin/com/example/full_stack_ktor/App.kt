@@ -14,6 +14,7 @@ import com.example.full_stack_ktor.share_components.headerMasterComponent
 import com.example.full_stack_ktor.share_components.sideBarComponent
 import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
 import com.example.full_stack_ktor.ui.cms.login.loginCMSAdminPage
+import com.example.full_stack_ktor.ui.cms.pages.pagesCMSView
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage
 import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
 import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
@@ -74,12 +75,6 @@ class App : Application(), KoinComponent {
 		require("css/utilities_two.css")
 	}
 	
-	val routesWithoutHeaderFooter = setOf(
-		AppRouter.Login,
-		AppRouter.Signup,
-		AppRouter.CMSLogin
-	)
-	
 	override fun start(state: Map<String, Any>) {
 		root("kvapp") {
 			val router by inject<AppRouterViewModel>()
@@ -92,6 +87,7 @@ class App : Application(), KoinComponent {
 				val routerState = appRouterState.backstack
 				routerState.renderCurrentDestination(
 					route = { appRouter ->
+						console.log(appRouter)
 						when (appRouter) {
 							AppRouter.Root -> homePage()
 							AppRouter.Home -> homePage()
@@ -100,9 +96,10 @@ class App : Application(), KoinComponent {
 							AppRouter.About -> div { +"About Page" }
 							AppRouter.CMSHeader -> div { +"CMS Header Page" }
 							AppRouter.CMSContent -> div { +"CMS Content Page" }
-							AppRouter.CMSPage -> div { +"CMS Page Page" }
+							AppRouter.CMSPage -> pagesCMSView()
 							AppRouter.CMSBlog -> div { +"CMS Blog Page" }
 							AppRouter.CMSPost -> div { +"CMS Post Page" }
+							AppRouter.CMSPostDetail -> div { +"CMS Product Page" }
 							AppRouter.CMSAdmin -> adminCmsPage()
 							AppRouter.CMSMedia -> div { +"CMS Media Page" }
 							AppRouter.CMSFooter -> div { +"CMS Footer Page" }
