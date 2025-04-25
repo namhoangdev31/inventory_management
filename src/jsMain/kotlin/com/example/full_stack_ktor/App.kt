@@ -18,7 +18,7 @@ import com.example.full_stack_ktor.ui.cms.pages.pagesCMSView
 import com.example.full_stack_ktor.ui.home_page.presentation.homePage
 import com.example.full_stack_ktor.ui.login_page.presentation.loginPage
 import com.example.full_stack_ktor.ui.register_page.presentation.registerPage
-import com.example.full_stack_ktor.ui.super_admin.superAdmin
+import com.example.full_stack_ktor.ui.super_admin.superAdminPage
 import io.kvision.*
 import io.kvision.html.div
 import io.kvision.html.footer
@@ -90,7 +90,7 @@ class App : Application(), KoinComponent {
 						console.log(appRouter)
 						when (appRouter) {
 							AppRouter.Root -> homePage()
-							AppRouter.Home -> homePage()
+							AppRouter.Admin -> superAdminPage()
 							AppRouter.Login -> loginPage()
 							AppRouter.Signup -> registerPage()
 							AppRouter.About -> div { +"About Page" }
@@ -106,7 +106,6 @@ class App : Application(), KoinComponent {
 							AppRouter.CMSCategories -> div { +"CMS Categories" }
 							AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
 							AppRouter.CMSLogin -> loginCMSAdminPage()
-							AppRouter.SuperAdmin -> superAdmin()
 						}
 					},
 					notFound = {

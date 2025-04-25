@@ -18,11 +18,10 @@ enum class AppRouter(
     override val annotations: Set<RouteAnnotation> = emptySet()
 ) : Route {
     Root("/"),
-    Home("/home"),
+    Admin("/admin"),
     Login("/login"),
     Signup("/signup"),
     About("/about"),
-    SuperAdmin("/super-admin"),
     CMSAdmin("/cms-admin"),
     CMSLogin("/cms-login"),
     CMSHeader("/cms-header"),
@@ -30,7 +29,7 @@ enum class AppRouter(
     CMSFooter("/cms-footer"),
     CMSSiderBar("/cms-sidebar"),
     CMSContent("/cms-content"),
-    CMSMedia("/cms-media/media"),
+    CMSMedia("/cms-media"),
     CMSCategories("/cms-categories"),
     CMSPost("/cms-posts"),
     CMSPostDetail("/cms-posts/:postId"),
@@ -47,7 +46,7 @@ class AppRouterViewModel(
     config = config
         .withBrowserHistoryRouter(
             RoutingTable.fromEnum(AppRouter.entries.toTypedArray()),
-            initialRoute = AppRouter.Home,
+            initialRoute = AppRouter.Root,
             basePath = "/"
         )
         .build(),

@@ -20,19 +20,16 @@ import org.koin.core.component.inject
 import org.koin.dsl.module
 import kotlin.getValue
 
-fun Container.superAdmin(): KoinComponent = object : KoinComponent {
+fun Container.superAdminPage(): KoinComponent = object : KoinComponent {
     val superAdminViewModel by inject<SuperAdminViewModel>()
     init {
         div(className = "min-h-screen flex items-center justify-center bg-gray-50") {
             div(className = "w-full max-w-sm bg-white p-8 rounded-lg shadow-md") {
-
-                // Logo + CMS Name
                 div(className = "mb-6 text-center") {
                     image(src = "images/logo.png", className = "h-10 mx-auto mb-2")
                     h1(className = "text-xl font-semibold text-gray-800") { +"Super Admin" }
                 }
 
-                // Email Field
                 div(className = "mb-4") {
                     label(className = "block text-sm font-medium text-gray-700 mb-1") {
                         +"Username"
@@ -49,7 +46,6 @@ fun Container.superAdmin(): KoinComponent = object : KoinComponent {
                     }
                 }
 
-                // Password Field
                 div(className = "mb-4") {
                     label(className = "block text-sm font-medium text-gray-700 mb-1") {
                         +"Password"
@@ -66,7 +62,6 @@ fun Container.superAdmin(): KoinComponent = object : KoinComponent {
                     }
                 }
 
-                // Forgot password link
                 div(className = "text-right mb-4") {
                     a(
                         href = "#",
@@ -75,7 +70,6 @@ fun Container.superAdmin(): KoinComponent = object : KoinComponent {
                     )
                 }
 
-                // Login Button
                 button(
                     type = ButtonType.BUTTON,
                     className = "w-full py-2 px-4 bg-indigo-600 text-white font-semibold rounded-md hover:bg-indigo-500 transition duration-150",

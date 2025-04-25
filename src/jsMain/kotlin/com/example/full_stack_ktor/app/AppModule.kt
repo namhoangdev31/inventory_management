@@ -2,7 +2,7 @@ package com.example.full_stack_ktor.app
 
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.core.JsConsoleLogger
-import com.copperleaf.ballast.navigation.browser.BrowserHistoryNavigationInterceptor
+import com.copperleaf.ballast.core.LoggingInterceptor
 import com.copperleaf.ballast.repository.bus.EventBus
 import com.copperleaf.ballast.repository.bus.EventBusImpl
 import com.example.full_stack_ktor.AppScope
