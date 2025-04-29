@@ -14,7 +14,7 @@ fun Container.pagesCMSView(): KoinComponent = object : KoinComponent {
 	val pagesViewModel by inject<PagesViewModel>()
 	
 	init {
-		div(className = "container mx-auto p-6 bg-white shadow-md rounded-lg") {
+		div(className = "container mx-auto p-6 bg-white rounded-lg") {
 			div(className = "flex justify-between items-center mb-4 flex-row") {
 				h1(className = "text-3xl font-bold text-gray-900 mb-4 md:mb-0") { +"""Pages""" }
 				button(className = "px-4 py-2 border border-gray-300 rounded-md text-sm", text = "Create New")
@@ -25,7 +25,7 @@ fun Container.pagesCMSView(): KoinComponent = object : KoinComponent {
 					placeholder = "Search by Title"
 				}
 			}
-			div(className = "overflow-x-auto bg-white rounded-lg shadow-md") {
+			div(className = "overflow-x-auto bg-white rounded-lg") {
 				table("min-w-full table-auto") {
 					thead(className = "bg-gray-50") {
 						tr {
