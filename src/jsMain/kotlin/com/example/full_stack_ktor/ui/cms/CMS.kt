@@ -36,21 +36,21 @@ fun Container.headerCMSComponent(): KoinComponent = object : KoinComponent {
 			nav(className = "hidden md:flex space-x-6") {
 				ul(className = "flex gap-6") {
 					listOf(
-						"Pages" to "/cms-pages",
-						"Products" to "/cms-products",
-						"Orders" to "/cms-orders",
-						"Media" to "/cms-media",
-						"Categories" to "/cms-categories",
-						"Users" to "/cms-users",
-						"Redirects" to "/cms-redirects",
-						"Globals" to "/cms-globals"
+						"Pages" to AppRouter.CMSPage,
+						"Products" to AppRouter.CMSProducts,
+						"Orders" to AppRouter.CMSOrders,
+						"Media" to AppRouter.CMSMedia,
+						"Categories" to AppRouter.CMSCategories,
+						"Users" to AppRouter.CMSUser,
+						"Redirects" to AppRouter.CMSRedirects,
+						"Globals" to AppRouter.CMSGlobals
 					).forEach { (label, link) ->
 						li {
-							button(className = "text-sm font-normal text-gray-700 hover:text-blue-600", text = label) {
+							button(className = "text-sm font-normal text-gray-700 hover:text-blue-600 active:", text = label) {
 								onClick { event ->
 									router.trySend(
 										RouterContract.Inputs.GoToDestination(
-											AppRouter.CMSMedia.directions().build()
+											link.directions().build()
 										)
 									)
 								}

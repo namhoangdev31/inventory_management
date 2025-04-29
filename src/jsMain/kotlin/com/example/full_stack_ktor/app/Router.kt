@@ -34,8 +34,13 @@ enum class AppRouter(
     CMSSiderBar("/cms-sidebar"),
     CMSContent("/cms-content"),
     CMSMedia("/cms-media"),
+    CMSUser("/cms-user"),
     CMSCategories("/cms-categories"),
     CMSPost("/cms-posts"),
+    CMSProducts("/cms-products"),
+    CMSOrders("/cms-orders"),
+    CMSGlobals("/cms-globals"),
+    CMSRedirects("/cms-redirects"),
     CMSPostDetail("/cms-posts/:postId"),
     CMSBlog("/cms-blogs");
 

@@ -8,6 +8,7 @@ import io.kvision.html.*
 fun Container.footerMasterComponent(router: AppRouter) {
 	when (router) {
 		AppRouter.CMSAdmin -> footerCMSComponent()
+		AppRouter.CMSMedia -> footerCMSComponent()
 		else -> {
 			div(className = "hidden")
 		}
