@@ -95,8 +95,11 @@ class App : Application(), KoinComponent {
 							AppRouter.Signup -> registerPage()
 							AppRouter.About -> div { +"About Page" }
 							AppRouter.CMSHeader -> div { +"CMS Header Page" }
+							AppRouter.CMSHeaderUpdate -> div { +"CMS Header Update Page" }
 							AppRouter.CMSContent -> div { +"CMS Content Page" }
 							AppRouter.CMSPage -> pagesCMSView()
+							AppRouter.CMSPageDetail -> div { +"CMS Page Detail Page" }
+							AppRouter.CMSPageCreate -> div { +"CMS Page Create Page" }
 							AppRouter.CMSBlog -> div { +"CMS Blog Page" }
 							AppRouter.CMSPost -> div { +"CMS Post Page" }
 							AppRouter.CMSPostDetail -> div { +"CMS Product Page" }
@@ -106,6 +109,7 @@ class App : Application(), KoinComponent {
 							AppRouter.CMSCategories -> div { +"CMS Categories" }
 							AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
 							AppRouter.CMSLogin -> loginCMSAdminPage()
+							else -> div { +"Unknown route" }
 						}
 					},
 					notFound = {
