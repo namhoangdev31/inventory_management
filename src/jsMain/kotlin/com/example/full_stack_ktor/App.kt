@@ -11,6 +11,7 @@ import com.example.full_stack_ktor.app.AppRouterViewModel
 import com.example.full_stack_ktor.app.initializeKoin
 import com.example.full_stack_ktor.share_components.footerMasterComponent
 import com.example.full_stack_ktor.share_components.headerMasterComponent
+import com.example.full_stack_ktor.share_components.notFoundPage
 import com.example.full_stack_ktor.share_components.sideBarComponent
 import com.example.full_stack_ktor.ui.cms.admin.adminCmsPage
 import com.example.full_stack_ktor.ui.cms.login.loginCMSAdminPage
@@ -87,7 +88,6 @@ class App : Application(), KoinComponent {
 				val routerState = appRouterState.backstack
 				routerState.renderCurrentDestination(
 					route = { appRouter ->
-						console.log(appRouter)
 						when (appRouter) {
 							AppRouter.Root -> homePage()
 							AppRouter.Admin -> superAdminPage()
@@ -109,7 +109,13 @@ class App : Application(), KoinComponent {
 							AppRouter.CMSCategories -> div { +"CMS Categories" }
 							AppRouter.CMSSiderBar -> div { +"CMS Bar Page" }
 							AppRouter.CMSLogin -> loginCMSAdminPage()
-							else -> div { +"Unknown route" }
+							AppRouter.CMSProducts -> div{ +"CMS Products Page" }
+							AppRouter.CMSUser -> div { +"CMS User Page" }
+							AppRouter.CMSOrders -> div { +"CMS Orders" }
+							AppRouter.CMSGlobals -> div { +"CMS Globals" }
+							AppRouter.CMSRedirects -> div { +"CMS Redirect Page" }
+							AppRouter.CMSPageEdit -> div { +"CMS Edit Page" }
+							else -> notFoundPage()
 						}
 					},
 					notFound = {

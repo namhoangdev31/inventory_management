@@ -1,8 +1,8 @@
 package com.example.full_stack_ktor.ui.cms.pages.view_model
 
-import com.copperleaf.ballast.core.BasicViewModel
 import com.copperleaf.ballast.BallastViewModelConfiguration
 import com.copperleaf.ballast.build
+import com.copperleaf.ballast.core.BasicViewModel
 import com.copperleaf.ballast.withViewModel
 import kotlinx.coroutines.CoroutineScope
 
@@ -22,4 +22,8 @@ class PagesViewModel(
         )
         .build(),
     eventHandler = PagesEventHandler(),
-)
+) {
+    init {
+        trySend(PagesContract.Inputs.Initialize)
+    }
+}
